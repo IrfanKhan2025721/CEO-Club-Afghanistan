@@ -1,5 +1,9 @@
-const ClubMember = () => {
-  return <div>Club Members Section</div>;
-};
+import React from 'react'
 
-export default ClubMember;
+export default function InspiringLeaders() {
+  return (
+    <div>
+      
+    </div>
+  )
+}
