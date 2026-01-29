@@ -3,7 +3,7 @@ import CountUp from "./CountUp";
 
 export default function Counter() {
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12 py-12">
+    <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12 py-12 bg-black">
       {/* Founder */}
       <div className="flex flex-col items-center text-white">
         <CountUp
