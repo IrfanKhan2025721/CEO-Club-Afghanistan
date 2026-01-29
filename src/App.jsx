@@ -5,7 +5,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import Hero from "./Components/Home/HeroSection";
 import TrustedBy from "./Components/Home/TrustedBy";
 import Leadership from "./Components/Home/Leadership/Leadership";
-import Counter from "./Components/Home/Counter";
+import Counter from "./Components/Home/Counter/Counter";
 import InspiringLeaders from "./Components/Home/InspiringLeaders/InspiringLeaders";
 import JoinTeam from "./Components/Home/JoinTeam";
 
