@@ -10,30 +10,48 @@ import {
 
 const Card = ({ icon: Icon, text }) => {
   return (
-    <div className="relative w-[180px] h-[140px] rounded-xl p-[2px] overflow-hidden">
-      {/* Moving gradient border */}
+    <div className="relative w-[180px] h-[140px] flex items-center justify-center">
+      {/* 
+          1. The Border Layer 
+          - No 'rotate' transform used. 
+          - Animate the --angle variable instead.
+      */}
       <div
         className="absolute inset-0 rounded-xl"
         style={{
-          background: "conic-gradient(#FF9A00, #000000, #0821E0, #FF9A00)",
-          backgroundSize: "300% 300%",
-          animation: "gradientMove 6s linear infinite",
+          padding: "2px", // Border thickness
+          background:
+            "conic-gradient(from var(--angle), #FF9A00, #000000, #0821E0, #FF9A00)",
+          WebkitMask:
+            "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+          WebkitMaskComposite: "destination-out",
+          maskComposite: "exclude",
+          animation: "spinGradient 4s linear infinite",
         }}
       />
 
-      {/* Card content */}
-      <div className="relative z-10 h-full w-full rounded-xl bg-black flex flex-col items-center justify-center text-center p-2">
+      {/* 2. Content Layer (Hollow/Transparent background) */}
+      <div className="relative z-10 flex flex-col items-center justify-center text-center p-4">
         <Icon className="w-8 h-8 text-[#FF9A00] mb-2" />
         <p className="font-semibold text-white text-sm">{text}</p>
       </div>
 
-      {/* Inline keyframes for moving gradient */}
+      {/* 
+          3. CSS for Custom Property Animation 
+          This @property block is essential for the browser to understand 
+          how to transition an 'angle' value.
+      */}
       <style>
         {`
-          @keyframes gradientMove {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+          @property --angle {
+            syntax: '<angle>';
+            initial-value: 0deg;
+            inherits: false;
+          }
+
+          @keyframes spinGradient {
+            from { --angle: 0deg; }
+            to { --angle: 360deg; }
           }
         `}
       </style>
@@ -52,7 +70,15 @@ export default function Existance() {
   ];
 
   return (
-    <div className="py-16 text-white">
+    <div
+      className="py-16 text-white"
+      style={{
+        backgroundImage:
+          `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('https://images.unsplash.com/photo-1593642634367-d91a135587b5?auto=format&fit=crop&w=1470&q=80')`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <h1 className="text-4xl font-bold text-center mb-4">Why We Exist</h1>
 
       <p className="text-center max-w-2xl mx-auto text-gray-300 mb-12">
