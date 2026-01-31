@@ -15,7 +15,7 @@ import WhoWeAre from "./Components/AboutPage/WhoWeAre";
 import OurMission from "./Components/AboutPage/OurMission";
 import Existance from "./Components/AboutPage/Existance";
 import OurApproach from "./Components/AboutPage/OurApproach";
-import LeaderShip from "./Components/AboutPage/Leadership/LeaderShip";
+import Founders from "./Components/AboutPage/Leadership/Founder";
 import JoinLeaderShip from "./Components/AboutPage/JoinLeaderShip";
 
 // Members page components
@@ -71,7 +71,7 @@ export default function App() {
               <OurMission />
               <Existance />
               <OurApproach />
-              <LeaderShip />
+              <Founders />
               <JoinLeaderShip />
             </>
           }
