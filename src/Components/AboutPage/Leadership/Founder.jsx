@@ -9,14 +9,14 @@ export default function Founder() {
         Leadership & Governance
       </h1>
 
-      {/* Grid */}
+      {/* Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl">
         {founders.map((founder, index) => (
           <div
             key={index}
             className="group bg-white rounded-2xl flex flex-col justify-between p-6
                        min-h-[28rem] transition-all duration-300
-                       hover:-translate-y-2 hover:shadow-[0_0_40px_rgba(210,139,29,0.35)]"
+                        hover:shadow-[0_0_40px_rgba(210,139,29,0.35)]"
           >
             {/* Image */}
             <div className="overflow-hidden rounded-xl w-full h-72">
