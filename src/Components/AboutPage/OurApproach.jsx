@@ -32,7 +32,11 @@ export default function OurApproach() {
         className="flex flex-col md:flex-row gap-4 items-center justify-center"
       >
         {/* Box 1 */}
-        <motion.div variants={item} className="h-10 w-full md:w-40 bg-orange-400 rounded">
+        <motion.div
+          variants={item}
+          whileHover={{ boxShadow: "0px 0px 15px 3px rgba(0, 112, 244, 0.7)" }}
+          className="h-10 w-full md:w-40 bg-[rgba(204,136,33,1)] rounded font-semibold cursor-pointer transition-shadow duration-100"
+        >
           <h1 className="pt-2 text-center text-sm md:text-base">1. Connect Leaders</h1>
         </motion.div>
 
@@ -42,7 +46,11 @@ export default function OurApproach() {
         </motion.div>
 
         {/* Box 2 */}
-        <motion.div variants={item} className="h-10 w-full md:w-40 bg-orange-400 rounded">
+        <motion.div
+          variants={item}
+          whileHover={{ boxShadow: "0px 0px 15px 3px rgba(0, 112, 244, 0.7)" }}
+          className="h-10 w-full md:w-40 bg-[rgba(204,136,33,1)] rounded font-semibold cursor-pointer transition-shadow duration-100"
+        >
           <h1 className="pt-2 text-center text-sm md:text-base">2. Facilitate Learning</h1>
         </motion.div>
 
@@ -52,7 +60,11 @@ export default function OurApproach() {
         </motion.div>
 
         {/* Box 3 */}
-        <motion.div variants={item} className="h-10 w-full md:w-40 bg-orange-400 rounded">
+        <motion.div
+          variants={item}
+          whileHover={{ boxShadow: "0px 0px 15px 3px rgba(0, 112, 244, 0.7)" }}
+          className="h-10 w-full md:w-40 bg-[rgba(204,136,33,1)] rounded font-semibold cursor-pointer transition-shadow duration-100"
+        >
           <h1 className="pt-2 text-center text-sm md:text-base">3. Build Partnerships</h1>
         </motion.div>
       </motion.div>
