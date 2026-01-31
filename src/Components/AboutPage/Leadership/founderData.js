@@ -1,5 +1,5 @@
 import leader1 from "../../../assets/AboutImages/saidShah.jpeg";
-import leader2 from "../../../assets/AboutImages/hamid.jpg";
+import leader2 from "../../../assets/AboutImages/agent.webp";
 import leader3 from "../../../assets/AboutImages/rohit.jpg";
 import linkedinLogo from "../../../assets/AboutImages/linkedin.png";
 
