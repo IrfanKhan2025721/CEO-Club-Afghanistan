@@ -10,7 +10,7 @@ import InspiringLeaders from "./Components/Home/InspiringLeaders/InspiringLeader
 import JoinTeam from "./Components/Home/JoinTeam";
 
 // About page components
-import AboutHero from "./Components/AboutPage/AboutHero";
+import AboutHero from "./Components/AboutPage/AboutHero/AboutHero";
 import WhoWeAre from "./Components/AboutPage/WhoWeAre";
 import OurMission from "./Components/AboutPage/OurMission";
 import Existance from "./Components/AboutPage/Existance";
