@@ -8,7 +8,7 @@ export default function OurApproach() {
     hidden: {},
     show: {
       transition: {
-        staggerChildren: 0.3, // controls sequential timing
+        staggerChildren: 0.3, 
       },
     },
   }
