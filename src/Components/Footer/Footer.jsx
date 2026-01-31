@@ -95,7 +95,7 @@ export default function Footer() {
 
         </span>
       </div>
-      <p className='text-white text-[0.7rem] sm:text-[0.8rem] lg:text-[1rem] text-center mt-[1rem] '>CEO Club Afghanistan is an independent, non-political organization.</p>
+      <p className='text-gray-600 text-[0.7rem] sm:text-[0.8rem] lg:text-[1rem] text-center mt-[1rem] pb-4'>CEO Club Afghanistan is an independent, non-political organization.</p>
     </footer>
   )
 }
