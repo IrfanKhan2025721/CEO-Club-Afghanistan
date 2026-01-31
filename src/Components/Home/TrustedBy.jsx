@@ -65,6 +65,7 @@ export default function TrustedBy() {
       <div className="hidden md:block pointer-events-none absolute top-0 left-0 h-full w-80 bg-gradient-to-r from-black z-20" />
       <div className="hidden md:block pointer-events-none absolute top-0 right-0 h-full w-80 bg-gradient-to-l from-black z-20" />
 
+      
       <Swiper
         modules={[Autoplay]}
         loop={true}
