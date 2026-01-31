@@ -3,9 +3,9 @@ import React from 'react'
 export default function TrustedBy() {
   return (
     <div className="relative mt-10 bg-black py-12 overflow-hidden">
-        <h2 className="text-2xl md:text-5xl text-white text-center font-bold  mb-20">
-          Trusted By
-        </h2>
+      <h2 className="text-2xl md:text-5xl text-white text-center font-bold  mb-20">
+        Trusted By
+      </h2>
 
       {/* Side shadow overlays */}
       <div className="hidden md:block pointer-events-none absolute top-0 left-0 h-full w-80 bg-gradient-to-r from-black z-20" />
