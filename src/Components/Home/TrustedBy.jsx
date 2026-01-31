@@ -57,7 +57,7 @@ const logos = [
 export default function TrustedBy() {
   return (
     <div className="relative mt-10 bg-black py-12 overflow-hidden">
-        <h2 className="text-2xl md:text-3xl text-white text-center font-semibold  mb-20">
+        <h2 className="text-2xl md:text-5xl text-white text-center font-bold  mb-20">
           Trusted By
         </h2>
 
