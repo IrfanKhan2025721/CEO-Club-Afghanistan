@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 export default function TrustedBy() {
   return (
@@ -47,6 +47,8 @@ export default function TrustedBy() {
           </SwiperSlide>
         ))}
       </Swiper>
+
+    <div>
     </div>
-  );
+  )
 }
