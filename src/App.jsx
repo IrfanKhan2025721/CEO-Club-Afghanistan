@@ -40,6 +40,7 @@ import JoinForm from "./Components/JoinClub/JoinClub";
 
 // Footer
 import Footer from "./Components/Footer/Footer";
+import Member from "./Components/Home/SingleMemberPage/Member";
 
 export default function App() {
   return (
@@ -57,6 +58,7 @@ export default function App() {
               <Counter />
               <InspiringLeaders />
               <JoinTeam />
+              <Member/>
             </>
           }
         />
