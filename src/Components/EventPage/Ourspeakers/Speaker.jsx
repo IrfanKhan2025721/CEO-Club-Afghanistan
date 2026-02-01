@@ -10,13 +10,15 @@ export default function Speaker() {
   return (
     <section className="max-w-7xl mx-auto px-4 py-16 bg-black text-white">
       <div className="grid md:grid-cols-2 gap-10 items-center mb-20">
-        <div>
+        <div className="ml-20">
           <h1 className="text-4xl font-extrabold mb-4">
             Our <span className="text-[#CC8821]">Speakers</span>
           </h1>
           <p className="text-gray-300 max-w-md">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Our speakers are industry leaders, visionaries, and innovators. They
+            bring real-world experience, success stories, and actionable
+            insights to inspire and guide attendees. Join us to learn from their
+            journeys and connect with thought leaders shaping the future.
           </p>
         </div>
 
