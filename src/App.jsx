@@ -57,6 +57,7 @@ export default function App() {
               <Counter />
               <InspiringLeaders />
               <JoinTeam />
+              
             </>
           }
         />
