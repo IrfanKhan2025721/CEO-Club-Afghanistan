@@ -16,7 +16,7 @@ function ContactHero() {
         <h2 className="text-white font-bold text-[2.7rem] sm:text-[3.2rem] md:text-[4rem] xlg:text-[5rem]">
           Contact Us
         </h2>
-        <h4 className="text-white font-semi text-[1.2rem] sm:text-[1.6rem] md:text-[2rem]">
+        <h4 className="text-white font-serif text-[1.2rem] sm:text-[1.6rem] md:text-[2rem]">
           Reach CEO Club Afghanistan
         </h4>
       </div>

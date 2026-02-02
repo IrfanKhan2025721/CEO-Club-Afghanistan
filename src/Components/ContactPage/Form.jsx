@@ -11,7 +11,7 @@ export default function Form() {
       </div>
 
       {/* Form */}
-      <section className='pt-[4rem] pb-[7rem] px-6 bg-black flex flex-col lg:flex-row gap-[4rem] xlg:gap-[2rem]'>
+      <section className='pt-[4rem] pb-[7rem] px-6 sm:px-12  bg-black flex flex-col lg:flex-row gap-[4rem] xl:px-[4.5rem]'>
         <form 
           onSubmit={(e) => {
             e.preventDefault()
