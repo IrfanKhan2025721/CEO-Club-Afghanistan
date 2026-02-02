@@ -5,23 +5,25 @@ import Navbar from "./Components/Navbar/Navbar";
 import Hero from "./Components/Home/HeroSection";
 import TrustedBy from "./Components/Home/TrustedBy";
 import Leadership from "./Components/Home/Leadership/Leadership";
-import Counter from "./Components/Home/Counter";
+import Counter from "./Components/Home/Counter/Counter";
 import InspiringLeaders from "./Components/Home/InspiringLeaders/InspiringLeaders";
 import JoinTeam from "./Components/Home/JoinTeam";
 
 // About page components
-import AboutHero from "./Components/AboutPage/AboutHero";
+import AboutHero from "./Components/AboutPage/AboutHero/AboutHero";
 import WhoWeAre from "./Components/AboutPage/WhoWeAre";
 import OurMission from "./Components/AboutPage/OurMission";
 import Existance from "./Components/AboutPage/Existance";
 import OurApproach from "./Components/AboutPage/OurApproach";
-import LeaderShip from "./Components/AboutPage/Leadership/LeaderShip";
+import Founders from "./Components/AboutPage/Leadership/Founder";
 import JoinLeaderShip from "./Components/AboutPage/JoinLeaderShip";
 
 // Members page components
 import MembersHero from "./Components/MembersPage/MemberHero";
 import ClubMember from "./Components/MembersPage/ClubMembers/ClubMember";
 import DistinguishedMembers from "./Components/MembersPage/DistinguishedMembers";
+import Member from "./Components/MembersPage/SingleMemberPage/Member";
+// import MemberStory from "./Components/MembersPage/SingleMemberPage/MemberStory";
 
 // Events page components
 import EventsHero from "./Components/EventPage/EventHero";
@@ -71,7 +73,7 @@ export default function App() {
               <OurMission />
               <Existance />
               <OurApproach />
-              <LeaderShip />
+              <Founders />
               <JoinLeaderShip />
             </>
           }
@@ -88,6 +90,9 @@ export default function App() {
             </>
           }
         />
+
+        {/* Member Detail Page */}
+        <Route path="/members/:id" element={<Member />} />
 
         {/* Events Page */}
         <Route
