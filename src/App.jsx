@@ -22,6 +22,8 @@ import JoinLeaderShip from "./Components/AboutPage/JoinLeaderShip";
 import MembersHero from "./Components/MembersPage/MemberHero";
 import ClubMember from "./Components/MembersPage/ClubMembers/ClubMember";
 import DistinguishedMembers from "./Components/MembersPage/DistinguishedMembers";
+import Member from "./Components/MembersPage/SingleMemberPage/Member";
+// import MemberStory from "./Components/MembersPage/SingleMemberPage/MemberStory";
 
 // Events page components
 import EventsHero from "./Components/EventPage/EventHero";
@@ -57,7 +59,6 @@ export default function App() {
               <Counter />
               <InspiringLeaders />
               <JoinTeam />
-              
             </>
           }
         />
@@ -89,6 +90,9 @@ export default function App() {
             </>
           }
         />
+
+        {/* Member Detail Page */}
+        <Route path="/members/:id" element={<Member />} />
 
         {/* Events Page */}
         <Route

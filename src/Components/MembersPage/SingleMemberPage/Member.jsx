@@ -1,56 +1,50 @@
-import React from 'react'
-import { memberData } from './memberData'
+import React from "react";
+import { useParams } from "react-router-dom";
+import { memberData } from "./memberData";
+import MemberStory from "./SingleMemberStory/MemberStory";
 
-function Member() {
+export default function Member() {
+  const { id } = useParams();
+
+  const member = memberData.find((m) => m.id === Number(id));
+
+  if (!member)
+    return <p className="text-white text-center mt-20">Member not found</p>;
+
   return (
-    <main className='my-[3rem] px-4 sm:px-8 md:px-16 bg-black py-[4rem]'>
-      {memberData.map((item) => (
-        <div
-          key={item.id}
-          className='flex flex-col gap-10 sm:flex-row sm:justify-between sm:gap-16 md:gap-18 '
-        >
-          {/* IMAGE */}
-          <div className='w-full mx-auto sm:w-[50%] '>
-            <img
-              src={item.image}
-              alt={item.name}
-              className='w-full rounded-lg h-[20rem] lg:h-[25rem] xl:h-[26.5rem]  object-cover'
-            />
-          </div>
-
-          {/* CONTENT */}
-          <div className='flex flex-col gap-3 sm:w-[50%]'>
-            {/* TEXT BLOCK */}
-            <h2 className='text-white font-bold text-[1.6rem] sm:text-[2rem] lg:text-[3rem] xl:text-[3.5rem]'>
-                {item.name}{' '}
-                <span className='text-[rgba(204,136,33,1)]'>
-                  {item.lastName}
-                </span>
-              </h2>
-            <div className='flex flex-col gap-8 sm:gap-16 lg:gap-20'>
-              <p className='text-[rgba(255,255,255,0.73)] font-bold text-[1.2rem]  sm:text-[1.5rem] lg:text-[2rem] xl:text-[2.3rem]'>
-                {item.role}
-                <ul className='text-[rgba(255,255,255,0.73)] font-normal mt-[0.5rem] text-[0.8rem]  lg:text-[1rem] xl:text-[1.1rem] leading-[1.5rem]'>
-                  {item.organizations.map((org, index) => (
-                    <li key={index}>{org}</li>
-                  ))}
-                </ul>
-              </p>
-
-              <blockquote className='text-[rgba(255,255,255,0.73)] font-bold text-[0.8rem] md:text-[1rem] lg:text-[1.2rem] xl:text-[1.4rem] max-w-[25rem] md:max-w-[32rem]'>
-                <span className='text-[rgba(204,136,33,0.51)]'>"</span>
-                {item.quote}
-                <span className='text-[rgba(204,136,33,0.51)]'>"</span>
-              </blockquote>
-            </div>
-
-            {/* QUOTE */}
-            
-          </div>
+    <main className="my-[3rem] px-4 sm:px-8 md:px-16 bg-black py-[4rem]">
+      <div className="flex flex-col gap-10 sm:flex-row sm:justify-between sm:gap-16">
+        {/* Image */}
+        <div className="w-full sm:w-[50%]">
+          <img
+            src={member.image}
+            alt={member.name}
+            className="w-full rounded-lg h-[26rem] object-cover"
+          />
         </div>
-      ))}
-    </main>
-  )
-}
 
-export default Member
+        {/* Content */}
+        <div className="flex flex-col gap-6 sm:w-[50%]">
+          <h2 className="text-white font-bold text-[2.5rem]">
+            {member.name}{" "}
+            <span className="text-[#CC8821]">{member.lastName}</span>
+          </h2>
+          <p className="text-gray-300 text-xl">{member.role}</p>
+
+          <ul className="text-gray-400 list-disc ml-5">
+            {member.organizations.map((org, index) => (
+              <li key={index}>{org}</li>
+            ))}
+          </ul>
+
+          <blockquote className="text-gray-400 italic mt-6">
+            “{member.quote}”
+          </blockquote>
+        </div>
+      </div>
+
+      {/* Founder Story / Social Buttons */}
+      <MemberStory />
+    </main>
+  );
+}
