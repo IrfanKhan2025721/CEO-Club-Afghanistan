@@ -30,8 +30,6 @@ export const clubMember = [
     companyLogo: linkedinLogo,
     linkedinUrl: "https://www.linkedin.com/in/rohit-shetty",
   },
-
-  // Online Images (Unsplash)
   {
     id: 4,
     name: "Ahmed Khan",

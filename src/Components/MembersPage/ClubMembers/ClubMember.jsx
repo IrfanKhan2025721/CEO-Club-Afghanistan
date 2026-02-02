@@ -1,26 +1,22 @@
 import React, { useState } from "react";
 import { clubMember } from "./clubMemberData";
+import { Link } from "react-router-dom";
 
 export default function ClubMember() {
   const [expanded, setExpanded] = useState(false);
 
-  // Show 6 by default
   const visibleMembers = expanded ? clubMember : clubMember.slice(0, 6);
 
   return (
     <div className="flex flex-col items-center px-4 sm:px-8 md:px-16 bg-black py-24">
-      {/* Heading + View All Button */}
+      {/* Heading + Button */}
       <div className="flex justify-between items-center w-full max-w-6xl mb-12">
         <h1 className="text-3xl sm:text-4xl font-bold text-[#CC8821]">
           Club Members
         </h1>
-
         <button
           onClick={() => setExpanded(true)}
-          className="bg-gradient-to-r from-gray-600 to-[#D28B1D]
-                     hover:from-gray-900 hover:to-yellow-400
-                     transition rounded-full py-2 px-6
-                     text-sm sm:text-base text-white"
+          className="bg-gradient-to-r from-gray-600 to-[#D28B1D] hover:from-gray-900 hover:to-yellow-400 transition rounded-full py-2 px-6 text-sm sm:text-base text-white"
         >
           View All Members
         </button>
@@ -28,12 +24,11 @@ export default function ClubMember() {
 
       {/* Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl">
-        {visibleMembers.map((member, index) => (
-          <div
-            key={index}
-            className="group bg-white rounded-2xl flex flex-col justify-between p-6
-                       min-h-[28rem] transition-all duration-300
-                       hover:shadow-[0_0_40px_rgba(210,139,29,0.35)]"
+        {visibleMembers.map((member) => (
+          <Link
+            key={member.id}
+            to={`/members/${member.id}`}
+            className="group bg-white rounded-2xl flex flex-col justify-between p-6 min-h-[28rem] transition-all duration-300 hover:shadow-[0_0_40px_rgba(210,139,29,0.35)]"
           >
             {/* Image */}
             <div className="overflow-hidden rounded-xl w-full h-72">
@@ -68,19 +63,15 @@ export default function ClubMember() {
                 />
               </a>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
 
-      {/* Bottom Expand / Collapse */}
+      {/* Expand / Collapse */}
       {clubMember.length > 6 && (
         <button
           onClick={() => setExpanded(!expanded)}
-          className="mt-12 bg-gradient-to-r from-[#D28B1D] to-yellow-500
-                     hover:from-yellow-400 hover:to-[#D28B1D]
-                     transition-all duration-300 rounded-md
-                     py-3 px-10 text-sm sm:text-base font-semibold text-white
-                     shadow-lg hover:shadow-yellow-500/30"
+          className="mt-12 bg-gradient-to-r from-[#D28B1D] to-yellow-500 hover:from-yellow-400 hover:to-[#D28B1D] transition-all duration-300 rounded-md py-3 px-10 text-sm sm:text-base font-semibold text-white shadow-lg hover:shadow-yellow-500/30"
         >
           {expanded ? "Show Less" : "Show More Members"}
         </button>
