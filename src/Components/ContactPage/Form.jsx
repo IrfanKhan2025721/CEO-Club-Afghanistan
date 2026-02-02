@@ -1,5 +1,5 @@
 import React from "react";
-import hero from "../../assets/HomeImages/hero.jpg";
+import hero from "../../assets/ContacImages/Capture.PNG";
 
 export default function Form() {
   return (
