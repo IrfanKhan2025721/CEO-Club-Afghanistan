@@ -1,10 +1,7 @@
-import React from 'react'
-import facebook from '../../assets/HomeImages/facebook.png'
-import ceoLogo from '../../assets/HomeImages/ceoLogo.png'
-import instagram from '../../assets/HomeImages/instagram.png'
-import X from '../../assets/HomeImages/X.png'
-import { aboutLinks, communityLinks, programsLinks } from './footerData'
-
+import React from "react";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { aboutLinks, communityLinks, programsLinks } from "./footerData";
 
 export default function Footer() {
   return (
@@ -20,82 +17,140 @@ export default function Footer() {
             <img src={X} alt="" className='w-[1.2rem] sm:w-[1.5rem] md:w-[2rem] lg:w-[2.5rem]'/>
           </div>
         </div>
+
         {/* links */}
-        <div className='flex justify-between items-center w-full sm:w-auto gap-[4rem]'>
+        <div className="flex justify-between items-start w-full sm:w-auto gap-[6rem] flex-wrap">
           {/* about_links */}
           <div>
-            <ul className='flex flex-col gap-2'>
-              {aboutLinks.map((link, index) => {
-                return(
-                  <>
-                    <h3 className='text-white font-bold text-[0.7rem] sm:text-[0.8rem] md:text-[1rem] '>{link.title}</h3>
-                    <li key={index} className='text-[rgba(153,153,153,1)] text-[0.9rem] sm:text-[1rem] md:text-[1.2rem] xlg:text-[1.4rem] mt-[0.3rem]'>
-                    <a href="#">{link.link_1}</a>
-                    </li>
-                    <li key={index}>
-                      <a href="#" className='text-[rgba(153,153,153,1)] text-[0.9rem] sm:text-[1rem] md:text-[1.2rem] xlg:text-[1.4rem]'>{link.link_2}</a>
-                    </li>
-                    <li key={index}>
-                      <a href="#" className='text-[rgba(153,153,153,1)] text-[0.9rem] sm:text-[1rem] md:text-[1.2rem] xlg:text-[1.4rem]'>{link.link_3}</a>
-                    </li>
-                  </>
-                )
-              })}
-            </ul>
+            {aboutLinks.map((section, index) => (
+              <div key={index} className="mb-6">
+                <h3 className="text-white font-bold text-[0.9rem] sm:text-[1rem] md:text-[1.5rem]">
+                  {section.title}
+                </h3>
+
+                <ul className="flex flex-col gap-3 mt-3">
+                  <li className="text-[rgba(153,153,153,1)] text-[0.85rem] sm:text-[0.95rem] md:text-[1.05rem]">
+                    <a
+                      href="#"
+                      className="inline-block hover:underline underline-offset-8 decoration-[#CC8821] decoration-2 hover:text-white transition-all duration-300"
+                    >
+                      {section.link_1}
+                    </a>
+                  </li>
+
+                  <li className="text-[rgba(153,153,153,1)] text-[0.85rem] sm:text-[0.95rem] md:text-[1.05rem]">
+                    <a
+                      href="#"
+                      className="inline-block hover:underline underline-offset-8 decoration-[#CC8821] decoration-2 hover:text-white transition-all duration-300"
+                    >
+                      {section.link_2}
+                    </a>
+                  </li>
+
+                  <li className="text-[rgba(153,153,153,1)] text-[0.85rem] sm:text-[0.95rem] md:text-[1.05rem]">
+                    <a
+                      href="#"
+                      className="inline-block hover:underline underline-offset-8 decoration-[#CC8821] decoration-2 hover:text-white transition-all duration-300"
+                    >
+                      {section.link_3}
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            ))}
           </div>
+
           {/* community_links */}
           <div>
-            <ul className='flex flex-col gap-2'>
-              {communityLinks.map((link, index) => {
-                return(
-                  <>
-                    <h3 className='text-white font-bold text-[0.7rem] sm:text-[0.8rem] md:text-[1rem] '>{link.title}</h3>
-                    <li key={index} className='text-[rgba(153,153,153,1)] text-[0.9rem] sm:text-[1rem] md:text-[1.2rem] xlg:text-[1.4rem]  mt-[0.3rem]'>
-                    <a href="#">{link.link_1}</a>
-                    </li>
-                    <li key={index}>
-                      <a href="#" className='text-[rgba(153,153,153,1)] text-[0.9rem] sm:text-[1rem] md:text-[1.2rem] xlg:text-[1.4rem]'>{link.link_2}</a>
-                    </li>
-                    <li key={index}>
-                      <a href="#" className='text-[rgba(153,153,153,1)] text-[0.9rem] sm:text-[1rem] md:text-[1.2rem] xlg:text-[1.4rem]'>{link.link_3}</a>
-                    </li>
-                  </>
-                )
-              })}
-            </ul>
+            {communityLinks.map((section, index) => (
+              <div key={index} className="mb-6">
+                <h3 className="text-white font-bold text-[0.9rem] sm:text-[1rem] md:text-[1.5rem]">
+                  {section.title}
+                </h3>
+
+                <ul className="flex flex-col gap-3 mt-3">
+                  <li className="text-[rgba(153,153,153,1)] text-[0.85rem] sm:text-[0.95rem] md:text-[1.05rem]">
+                    <a
+                      href="#"
+                      className="inline-block hover:underline underline-offset-8 decoration-[#CC8821] decoration-2 hover:text-white transition-all duration-300"
+                    >
+                      {section.link_1}
+                    </a>
+                  </li>
+
+                  <li className="text-[rgba(153,153,153,1)] text-[0.85rem] sm:text-[0.95rem] md:text-[1.05rem]">
+                    <a
+                      href="#"
+                      className="inline-block hover:underline underline-offset-8 decoration-[#CC8821] decoration-2 hover:text-white transition-all duration-300"
+                    >
+                      {section.link_2}
+                    </a>
+                  </li>
+
+                  <li className="text-[rgba(153,153,153,1)] text-[0.85rem] sm:text-[0.95rem] md:text-[1.05rem]">
+                    <a
+                      href="#"
+                      className="inline-block hover:underline underline-offset-8 decoration-[#CC8821] decoration-2 hover:text-white transition-all duration-300"
+                    >
+                      {section.link_3}
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            ))}
           </div>
+
           {/* programs_links */}
           <div>
-            <ul className='flex flex-col gap-2'>
-              {programsLinks.map((link, index) => {
-                return(
-                  <>
-                    <h3 className='text-white font-bold text-[0.7rem] sm:text-[0.8rem] md:text-[1rem] '>{link.title}</h3>
-                    <li key={index} className='text-[rgba(153,153,153,1)] text-[0.9rem] sm:text-[1rem] md:text-[1.2rem] xlg:text-[1.4rem] mt-[0.3rem]'>
-                    <a href="#">{link.link_1}</a>
-                    </li>
-                    <li key={index}>
-                      <a href="#" className='text-[rgba(153,153,153,1)] text-[0.9rem] sm:text-[1rem] md:text-[1.2rem] xlg:text-[1.4rem]'>{link.link_2}</a>
-                    </li>
-                    <li key={index}>
-                      <a href="#" className='text-[rgba(153,153,153,1)] text-[0.9rem] sm:text-[1rem] md:text-[1.2rem] xlg:text-[1.4rem]'>{link.link_3}</a>
-                    </li>
-                  </>
-                )
-              })}
-            </ul>
-          </div>
-          
-        </div>
-        <span
-          className='absolute bottom-0 left-0 w-full h-[1px]
-          bg-[linear-gradient(90deg,rgba(0,0,0,0.8)_8%,rgba(204,136,33,1)_47%,rgba(0,0,0,0.8)_100%)]
-          '
-        >
+            {programsLinks.map((section, index) => (
+              <div key={index} className="mb-6">
+                <h3 className="text-white font-bold text-[0.9rem] sm:text-[1rem] md:text-[1.5rem]">
+                  {section.title}
+                </h3>
 
-        </span>
+                <ul className="flex flex-col gap-3 mt-3">
+                  <li className="text-[rgba(153,153,153,1)] text-[0.85rem] sm:text-[0.95rem] md:text-[1.05rem]">
+                    <a
+                      href="#"
+                      className="inline-block hover:underline underline-offset-8 decoration-[#CC8821] decoration-2 hover:text-white transition-all duration-300"
+                    >
+                      {section.link_1}
+                    </a>
+                  </li>
+
+                  <li className="text-[rgba(153,153,153,1)] text-[0.85rem] sm:text-[0.95rem] md:text-[1.05rem]">
+                    <a
+                      href="#"
+                      className="inline-block hover:underline underline-offset-8 decoration-[#CC8821] decoration-2 hover:text-white transition-all duration-300"
+                    >
+                      {section.link_2}
+                    </a>
+                  </li>
+
+                  <li className="text-[rgba(153,153,153,1)] text-[0.85rem] sm:text-[0.95rem] md:text-[1.05rem]">
+                    <a
+                      href="#"
+                      className="inline-block hover:underline underline-offset-8 decoration-[#CC8821] decoration-2 hover:text-white transition-all duration-300"
+                    >
+                      {section.link_3}
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* bottom line */}
+        <span
+          className="absolute bottom-0 left-0 w-full h-[1px]
+          bg-[linear-gradient(90deg,rgba(0,0,0,0.8)_8%,rgba(204,136,33,1)_47%,rgba(0,0,0,0.8)_100%)]"
+        ></span>
       </div>
-      <p className='text-gray-600 text-[0.7rem] sm:text-[0.8rem] lg:text-[1rem] text-center mt-[1rem] pb-4'>CEO Club Afghanistan is an independent, non-political organization.</p>
+
+      <p className="text-gray-600 text-[0.7rem] sm:text-[0.8rem] lg:text-[1rem] text-center mt-[1rem] pb-4">
+        CEO Club Afghanistan is an independent, non-political organization.
+      </p>
     </footer>
-  )
+  );
 }

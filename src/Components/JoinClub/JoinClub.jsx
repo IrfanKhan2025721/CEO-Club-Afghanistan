@@ -31,7 +31,7 @@ export default function JoinClub() {
   };
 
   const inputClass =
-    "w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl outline-none focus:border-[#CC8821] focus:ring-1 focus:ring-[#CC8821] text-white placeholder-gray-400";
+    "w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl outline-none focus:border-[#CC8821] focus:ring-1 focus:ring-[#CC8821] text-gray-400 placeholder-gray-400";
 
   const sectionTitle = "font-semibold mb-3 text-[#CC8821]";
 
@@ -39,13 +39,12 @@ export default function JoinClub() {
     <div className="min-h-screen flex items-center justify-center p-4 bg-black">
       <div className="w-full max-w-4xl bg-gray-900 rounded-2xl shadow-lg p-8 border border-gray-800">
         <h1 className="text-3xl font-bold text-center text-[#CC8821] mb-2">
-          CEO Club AFG
+          CEO Club AFGHANISTAN
         </h1>
         <p className="text-center text-gray-300 mb-8">
           Membership Application Form
         </p>
 
-        {/* SUCCESS MESSAGE */}
         {success && (
           <div className="mb-6 flex items-center gap-3 bg-green-900/30 border border-green-800 text-green-400 px-4 py-3 rounded-xl">
             <span className="text-xl">✅</span>
@@ -54,7 +53,6 @@ export default function JoinClub() {
         )}
 
         <form onSubmit={handleSubmit}>
-          {/* BASIC INFO */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
             <input
               name="full_name"
@@ -83,12 +81,11 @@ export default function JoinClub() {
             />
           </div>
 
-          {/* APPLICATION TYPE */}
           <div className="mb-6">
             <label className="font-semibold block mb-2 text-gray-200">
               Apply As
             </label>
-            <div className="flex gap-6 flex-wrap text-gray-300">
+            <div className="flex gap-6 flex-wrap text-gray-400">
               <label className="flex items-center gap-2">
                 <input
                   type="radio"
@@ -120,7 +117,6 @@ export default function JoinClub() {
             </div>
           </div>
 
-          {/* COMPANY FORM */}
           {type === "company" && (
             <div className="mb-6">
               <h2 className={sectionTitle}>Company Information</h2>
@@ -157,7 +153,7 @@ export default function JoinClub() {
                   <option value="">Company Size</option>
                   <option>1–10</option>
                   <option>11–50</option>
-                  <option>51–100</option>
+                  <option>50–100</option>
                   <option>100+</option>
                 </select>
                 <input
@@ -170,7 +166,6 @@ export default function JoinClub() {
             </div>
           )}
 
-          {/* EMPLOYEE FORM */}
           {type === "employee" && (
             <div className="mb-6">
               <h2 className={sectionTitle}>Professional Information</h2>
@@ -212,7 +207,6 @@ export default function JoinClub() {
             </div>
           )}
 
-          {/* MEMBER FORM */}
           {type === "member" && (
             <div className="mb-6">
               <h2 className={sectionTitle}>Member Information</h2>
@@ -246,7 +240,6 @@ export default function JoinClub() {
             </div>
           )}
 
-          {/* PURPOSE */}
           <div className="mb-6">
             <textarea
               name="message"
@@ -256,7 +249,6 @@ export default function JoinClub() {
             />
           </div>
 
-          {/* AGREEMENT */}
           <div className="mb-6">
             <label className="flex items-center gap-2 text-sm text-gray-300">
               <input
@@ -268,7 +260,6 @@ export default function JoinClub() {
             </label>
           </div>
 
-          {/* SUBMIT */}
           <button
             type="submit"
             className="w-full bg-[#CC8821] text-white py-3 rounded-xl font-semibold hover:bg-[#b8781e] transition"
