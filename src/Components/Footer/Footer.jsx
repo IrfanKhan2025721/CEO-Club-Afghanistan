@@ -1,8 +1,4 @@
 import React from "react";
-import facebook from "../../assets/HomeImages/facebook.png";
-import ceoLogo from "../../assets/HomeImages/ceoLogo.png";
-import instagram from "../../assets/HomeImages/instagram.png";
-import X from "../../assets/HomeImages/X.png";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { aboutLinks, communityLinks, programsLinks } from "./footerData";
