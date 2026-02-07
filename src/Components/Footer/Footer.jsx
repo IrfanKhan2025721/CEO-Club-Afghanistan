@@ -56,26 +56,41 @@ export default function Footer() {
         </div>
 
         {/* links */}
-        <div className="flex justify-between items-start w-full sm:w-auto gap-[4rem] flex-wrap">
+        <div className="flex justify-between items-start w-full sm:w-auto gap-[6rem] flex-wrap">
           {/* about_links */}
           <div>
             {aboutLinks.map((section, index) => (
-              <div key={index} className="mb-4">
-                <h3 className="text-white font-bold text-[0.7rem] sm:text-[0.8rem] md:text-[1rem]">
+              <div key={index} className="mb-6">
+                <h3 className="text-white font-bold text-[0.9rem] sm:text-[1rem] md:text-[1.5rem]">
                   {section.title}
                 </h3>
 
-                <ul className="flex flex-col gap-2 mt-2">
-                  <li className="text-[rgba(153,153,153,1)] text-[0.5rem] sm:text-[0.7rem] md:text-[0.8rem]">
-                    <a href="#">{section.link_1}</a>
+                <ul className="flex flex-col gap-3 mt-3">
+                  <li className="text-[rgba(153,153,153,1)] text-[0.85rem] sm:text-[0.95rem] md:text-[1.05rem]">
+                    <a
+                      href="#"
+                      className="inline-block hover:underline underline-offset-8 decoration-[#CC8821] decoration-2 hover:text-white transition-all duration-300"
+                    >
+                      {section.link_1}
+                    </a>
                   </li>
 
-                  <li className="text-[rgba(153,153,153,1)] text-[0.5rem] sm:text-[0.7rem] md:text-[0.8rem]">
-                    <a href="#">{section.link_2}</a>
+                  <li className="text-[rgba(153,153,153,1)] text-[0.85rem] sm:text-[0.95rem] md:text-[1.05rem]">
+                    <a
+                      href="#"
+                      className="inline-block hover:underline underline-offset-8 decoration-[#CC8821] decoration-2 hover:text-white transition-all duration-300"
+                    >
+                      {section.link_2}
+                    </a>
                   </li>
 
-                  <li className="text-[rgba(153,153,153,1)] text-[0.5rem] sm:text-[0.7rem] md:text-[0.8rem]">
-                    <a href="#">{section.link_3}</a>
+                  <li className="text-[rgba(153,153,153,1)] text-[0.85rem] sm:text-[0.95rem] md:text-[1.05rem]">
+                    <a
+                      href="#"
+                      className="inline-block hover:underline underline-offset-8 decoration-[#CC8821] decoration-2 hover:text-white transition-all duration-300"
+                    >
+                      {section.link_3}
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -85,22 +100,37 @@ export default function Footer() {
           {/* community_links */}
           <div>
             {communityLinks.map((section, index) => (
-              <div key={index} className="mb-4">
-                <h3 className="text-white font-bold text-[0.7rem] sm:text-[0.8rem] md:text-[1rem]">
+              <div key={index} className="mb-6">
+                <h3 className="text-white font-bold text-[0.9rem] sm:text-[1rem] md:text-[1.5rem]">
                   {section.title}
                 </h3>
 
-                <ul className="flex flex-col gap-2 mt-2">
-                  <li className="text-[rgba(153,153,153,1)] text-[0.5rem] sm:text-[0.7rem] md:text-[0.8rem]">
-                    <a href="#">{section.link_1}</a>
+                <ul className="flex flex-col gap-3 mt-3">
+                  <li className="text-[rgba(153,153,153,1)] text-[0.85rem] sm:text-[0.95rem] md:text-[1.05rem]">
+                    <a
+                      href="#"
+                      className="inline-block hover:underline underline-offset-8 decoration-[#CC8821] decoration-2 hover:text-white transition-all duration-300"
+                    >
+                      {section.link_1}
+                    </a>
                   </li>
 
-                  <li className="text-[rgba(153,153,153,1)] text-[0.5rem] sm:text-[0.7rem] md:text-[0.8rem]">
-                    <a href="#">{section.link_2}</a>
+                  <li className="text-[rgba(153,153,153,1)] text-[0.85rem] sm:text-[0.95rem] md:text-[1.05rem]">
+                    <a
+                      href="#"
+                      className="inline-block hover:underline underline-offset-8 decoration-[#CC8821] decoration-2 hover:text-white transition-all duration-300"
+                    >
+                      {section.link_2}
+                    </a>
                   </li>
 
-                  <li className="text-[rgba(153,153,153,1)] text-[0.5rem] sm:text-[0.7rem] md:text-[0.8rem]">
-                    <a href="#">{section.link_3}</a>
+                  <li className="text-[rgba(153,153,153,1)] text-[0.85rem] sm:text-[0.95rem] md:text-[1.05rem]">
+                    <a
+                      href="#"
+                      className="inline-block hover:underline underline-offset-8 decoration-[#CC8821] decoration-2 hover:text-white transition-all duration-300"
+                    >
+                      {section.link_3}
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -110,22 +140,37 @@ export default function Footer() {
           {/* programs_links */}
           <div>
             {programsLinks.map((section, index) => (
-              <div key={index} className="mb-4">
-                <h3 className="text-white font-bold text-[0.7rem] sm:text-[0.8rem] md:text-[1rem]">
+              <div key={index} className="mb-6">
+                <h3 className="text-white font-bold text-[0.9rem] sm:text-[1rem] md:text-[1.5rem]">
                   {section.title}
                 </h3>
 
-                <ul className="flex flex-col gap-2 mt-2">
-                  <li className="text-[rgba(153,153,153,1)] text-[0.5rem] sm:text-[0.7rem] md:text-[0.8rem]">
-                    <a href="#">{section.link_1}</a>
+                <ul className="flex flex-col gap-3 mt-3">
+                  <li className="text-[rgba(153,153,153,1)] text-[0.85rem] sm:text-[0.95rem] md:text-[1.05rem]">
+                    <a
+                      href="#"
+                      className="inline-block hover:underline underline-offset-8 decoration-[#CC8821] decoration-2 hover:text-white transition-all duration-300"
+                    >
+                      {section.link_1}
+                    </a>
                   </li>
 
-                  <li className="text-[rgba(153,153,153,1)] text-[0.5rem] sm:text-[0.7rem] md:text-[0.8rem]">
-                    <a href="#">{section.link_2}</a>
+                  <li className="text-[rgba(153,153,153,1)] text-[0.85rem] sm:text-[0.95rem] md:text-[1.05rem]">
+                    <a
+                      href="#"
+                      className="inline-block hover:underline underline-offset-8 decoration-[#CC8821] decoration-2 hover:text-white transition-all duration-300"
+                    >
+                      {section.link_2}
+                    </a>
                   </li>
 
-                  <li className="text-[rgba(153,153,153,1)] text-[0.5rem] sm:text-[0.7rem] md:text-[0.8rem]">
-                    <a href="#">{section.link_3}</a>
+                  <li className="text-[rgba(153,153,153,1)] text-[0.85rem] sm:text-[0.95rem] md:text-[1.05rem]">
+                    <a
+                      href="#"
+                      className="inline-block hover:underline underline-offset-8 decoration-[#CC8821] decoration-2 hover:text-white transition-all duration-300"
+                    >
+                      {section.link_3}
+                    </a>
                   </li>
                 </ul>
               </div>
