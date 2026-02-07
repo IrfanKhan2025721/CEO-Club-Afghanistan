@@ -7,13 +7,14 @@ export default function Footer() {
   return (
     <footer className="bg-black px-4 sm:px-8 md:px-16 pt-[3rem] md:pt-[4rem]">
       <div className="relative flex flex-col items-center sm:flex-row sm:justify-between gap-[3rem] pb-[2rem] sm:pb-[3rem]">
-        {/* logoes */}
+        {/* logo */}
         <div className="flex flex-col items-center justify-center gap-2">
           <img
             src="/LOGO2.png"
             alt="LOGO"
             className="w-[8rem] sm:w-[10rem] md:w-[12rem] lg:w-[14rem]"
           />
+
           {/* socials */}
           <div className="flex gap-[0.5rem] mt-2">
             <a
@@ -26,7 +27,7 @@ export default function Footer() {
             </a>
 
             <a
-              href="https://www.linkedin.com/company/ceo-club-afghanistan/posts/?feedView=all"
+              href="https://www.facebook.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-[#CC8821] transition text-[1rem] sm:text-[1.5rem] md:text-[2rem] lg:text-[2rem]"
@@ -35,7 +36,7 @@ export default function Footer() {
             </a>
 
             <a
-              href="https://www.linkedin.com/company/ceo-club-afghanistan/posts/?feedView=all"
+              href="https://www.instagram.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-[#CC8821] transition text-[1rem] sm:text-[1.5rem] md:text-[2rem] lg:text-[2rem]"
@@ -44,7 +45,7 @@ export default function Footer() {
             </a>
 
             <a
-              href="https://www.linkedin.com/company/ceo-club-afghanistan/posts/?feedView=all"
+              href="https://twitter.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-[#CC8821] transition text-[1rem] sm:text-[1.5rem] md:text-[2rem] lg:text-[2rem]"
@@ -53,123 +54,92 @@ export default function Footer() {
             </a>
           </div>
         </div>
+
         {/* links */}
-        <div className="flex justify-between items-center w-full sm:w-auto gap-[4rem]">
+        <div className="flex justify-between items-start w-full sm:w-auto gap-[4rem] flex-wrap">
           {/* about_links */}
           <div>
-            <ul className="flex flex-col gap-2">
-              {aboutLinks.map((link, index) => {
-                return (
-                  <>
-                    <h3 className="text-white font-bold text-[0.7rem] sm:text-[0.8rem] md:text-[1rem] ">
-                      {link.title}
-                    </h3>
-                    <li
-                      key={index}
-                      className="text-[rgba(153,153,153,1)] text-[0.5rem] sm:text-[0.7rem] md:text-[0.8rem]  mt-[0.3rem]"
-                    >
-                      <a href="#">{link.link_1}</a>
-                    </li>
-                    <li key={index}>
-                      <a
-                        href="#"
-                        className="text-[rgba(153,153,153,1)] text-[0.5rem] sm:text-[0.7rem] md:text-[0.8rem] "
-                      >
-                        {link.link_2}
-                      </a>
-                    </li>
-                    <li key={index}>
-                      <a
-                        href="#"
-                        className="text-[rgba(153,153,153,1)] text-[0.5rem] sm:text-[0.7rem] md:text-[0.8rem] "
-                      >
-                        {link.link_3}
-                      </a>
-                    </li>
-                  </>
-                );
-              })}
-            </ul>
+            {aboutLinks.map((section, index) => (
+              <div key={index} className="mb-4">
+                <h3 className="text-white font-bold text-[0.7rem] sm:text-[0.8rem] md:text-[1rem]">
+                  {section.title}
+                </h3>
+
+                <ul className="flex flex-col gap-2 mt-2">
+                  <li className="text-[rgba(153,153,153,1)] text-[0.5rem] sm:text-[0.7rem] md:text-[0.8rem]">
+                    <a href="#">{section.link_1}</a>
+                  </li>
+
+                  <li className="text-[rgba(153,153,153,1)] text-[0.5rem] sm:text-[0.7rem] md:text-[0.8rem]">
+                    <a href="#">{section.link_2}</a>
+                  </li>
+
+                  <li className="text-[rgba(153,153,153,1)] text-[0.5rem] sm:text-[0.7rem] md:text-[0.8rem]">
+                    <a href="#">{section.link_3}</a>
+                  </li>
+                </ul>
+              </div>
+            ))}
           </div>
+
           {/* community_links */}
           <div>
-            <ul className="flex flex-col gap-2">
-              {communityLinks.map((link, index) => {
-                return (
-                  <>
-                    <h3 className="text-white font-bold text-[0.7rem] sm:text-[0.8rem] md:text-[1rem] ">
-                      {link.title}
-                    </h3>
-                    <li
-                      key={index}
-                      className="text-[rgba(153,153,153,1)] text-[0.5rem] sm:text-[0.7rem] md:text-[0.8rem]  mt-[0.3rem]"
-                    >
-                      <a href="#">{link.link_1}</a>
-                    </li>
-                    <li key={index}>
-                      <a
-                        href="#"
-                        className="text-[rgba(153,153,153,1)] text-[0.5rem] sm:text-[0.7rem] md:text-[0.8rem] "
-                      >
-                        {link.link_2}
-                      </a>
-                    </li>
-                    <li key={index}>
-                      <a
-                        href="#"
-                        className="text-[rgba(153,153,153,1)] text-[0.5rem] sm:text-[0.7rem] md:text-[0.8rem] "
-                      >
-                        {link.link_3}
-                      </a>
-                    </li>
-                  </>
-                );
-              })}
-            </ul>
+            {communityLinks.map((section, index) => (
+              <div key={index} className="mb-4">
+                <h3 className="text-white font-bold text-[0.7rem] sm:text-[0.8rem] md:text-[1rem]">
+                  {section.title}
+                </h3>
+
+                <ul className="flex flex-col gap-2 mt-2">
+                  <li className="text-[rgba(153,153,153,1)] text-[0.5rem] sm:text-[0.7rem] md:text-[0.8rem]">
+                    <a href="#">{section.link_1}</a>
+                  </li>
+
+                  <li className="text-[rgba(153,153,153,1)] text-[0.5rem] sm:text-[0.7rem] md:text-[0.8rem]">
+                    <a href="#">{section.link_2}</a>
+                  </li>
+
+                  <li className="text-[rgba(153,153,153,1)] text-[0.5rem] sm:text-[0.7rem] md:text-[0.8rem]">
+                    <a href="#">{section.link_3}</a>
+                  </li>
+                </ul>
+              </div>
+            ))}
           </div>
+
           {/* programs_links */}
           <div>
-            <ul className="flex flex-col gap-2">
-              {programsLinks.map((link, index) => {
-                return (
-                  <>
-                    <h3 className="text-white font-bold text-[0.7rem] sm:text-[0.8rem] md:text-[1rem] ">
-                      {link.title}
-                    </h3>
-                    <li
-                      key={index}
-                      className="text-[rgba(153,153,153,1)] text-[0.5rem] sm:text-[0.7rem] md:text-[0.8rem]  mt-[0.3rem]"
-                    >
-                      <a href="#">{link.link_1}</a>
-                    </li>
-                    <li key={index}>
-                      <a
-                        href="#"
-                        className="text-[rgba(153,153,153,1)] text-[0.5rem] sm:text-[0.7rem] md:text-[0.8rem] "
-                      >
-                        {link.link_2}
-                      </a>
-                    </li>
-                    <li key={index}>
-                      <a
-                        href="#"
-                        className="text-[rgba(153,153,153,1)] text-[0.5rem] sm:text-[0.7rem] md:text-[0.8rem] "
-                      >
-                        {link.link_3}
-                      </a>
-                    </li>
-                  </>
-                );
-              })}
-            </ul>
+            {programsLinks.map((section, index) => (
+              <div key={index} className="mb-4">
+                <h3 className="text-white font-bold text-[0.7rem] sm:text-[0.8rem] md:text-[1rem]">
+                  {section.title}
+                </h3>
+
+                <ul className="flex flex-col gap-2 mt-2">
+                  <li className="text-[rgba(153,153,153,1)] text-[0.5rem] sm:text-[0.7rem] md:text-[0.8rem]">
+                    <a href="#">{section.link_1}</a>
+                  </li>
+
+                  <li className="text-[rgba(153,153,153,1)] text-[0.5rem] sm:text-[0.7rem] md:text-[0.8rem]">
+                    <a href="#">{section.link_2}</a>
+                  </li>
+
+                  <li className="text-[rgba(153,153,153,1)] text-[0.5rem] sm:text-[0.7rem] md:text-[0.8rem]">
+                    <a href="#">{section.link_3}</a>
+                  </li>
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
+
+        {/* bottom line */}
         <span
           className="absolute bottom-0 left-0 w-full h-[1px]
-          bg-[linear-gradient(90deg,rgba(0,0,0,0.8)_8%,rgba(204,136,33,1)_47%,rgba(0,0,0,0.8)_100%)]
-          "
+          bg-[linear-gradient(90deg,rgba(0,0,0,0.8)_8%,rgba(204,136,33,1)_47%,rgba(0,0,0,0.8)_100%)]"
         ></span>
       </div>
+
       <p className="text-gray-600 text-[0.7rem] sm:text-[0.8rem] lg:text-[1rem] text-center mt-[1rem] pb-4">
         CEO Club Afghanistan is an independent, non-political organization.
       </p>
