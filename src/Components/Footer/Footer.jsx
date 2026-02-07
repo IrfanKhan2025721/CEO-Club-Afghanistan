@@ -3,6 +3,8 @@ import facebook from "../../assets/HomeImages/facebook.png";
 import ceoLogo from "../../assets/HomeImages/ceoLogo.png";
 import instagram from "../../assets/HomeImages/instagram.png";
 import X from "../../assets/HomeImages/X.png";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { aboutLinks, communityLinks, programsLinks } from "./footerData";
 
 export default function Footer() {
@@ -34,6 +36,55 @@ export default function Footer() {
           </div>
         </div>
         <div className="flex justify-between items-center w-full sm:w-auto gap-[4rem]">
+        {/* logoes */}
+        <div className="flex flex-col items-center justify-center gap-2">
+          <img
+            src="/LOGO2.png"
+            alt="LOGO"
+            className="w-[8rem] sm:w-[10rem] md:w-[12rem] lg:w-[14rem]"
+          />
+          {/* socials */}
+          <div className="flex gap-[0.5rem] mt-2">
+            <a
+              href="https://www.linkedin.com/company/ceo-club-afghanistan/posts/?feedView=all"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-[#CC8821] transition text-[1rem] sm:text-[1.5rem] md:text-[2rem] lg:text-[2rem]"
+            >
+              <FaLinkedinIn />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/company/ceo-club-afghanistan/posts/?feedView=all"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-[#CC8821] transition text-[1rem] sm:text-[1.5rem] md:text-[2rem] lg:text-[2rem]"
+            >
+              <FaFacebookF />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/company/ceo-club-afghanistan/posts/?feedView=all"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-[#CC8821] transition text-[1rem] sm:text-[1.5rem] md:text-[2rem] lg:text-[2rem]"
+            >
+              <FaInstagram />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/company/ceo-club-afghanistan/posts/?feedView=all"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-[#CC8821] transition text-[1rem] sm:text-[1.5rem] md:text-[2rem] lg:text-[2rem]"
+            >
+              <FaXTwitter />
+            </a>
+          </div>
+        </div>
+        {/* links */}
+        <div className="flex justify-between items-center w-full sm:w-auto gap-[4rem]">
+          {/* about_links */}
           <div>
             <ul className="flex flex-col gap-2">
               {aboutLinks.map((link, index) => {

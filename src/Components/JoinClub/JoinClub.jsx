@@ -31,7 +31,7 @@ export default function JoinClub() {
   };
 
   const inputClass =
-    "w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl outline-none focus:border-[#CC8821] focus:ring-1 focus:ring-[#CC8821] text-white placeholder-gray-400";
+    "w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl outline-none focus:border-[#CC8821] focus:ring-1 focus:ring-[#CC8821] text-gray-400 placeholder-gray-400";
 
   const sectionTitle = "font-semibold mb-3 text-[#CC8821]";
 
@@ -39,7 +39,7 @@ export default function JoinClub() {
     <div className="min-h-screen flex items-center justify-center p-4 bg-black">
       <div className="w-full max-w-4xl bg-gray-900 rounded-2xl shadow-lg p-8 border border-gray-800">
         <h1 className="text-3xl font-bold text-center text-[#CC8821] mb-2">
-          CEO Club AFG
+          CEO Club AFGHANISTAN
         </h1>
         <p className="text-center text-gray-300 mb-8">
           Membership Application Form
@@ -85,7 +85,7 @@ export default function JoinClub() {
             <label className="font-semibold block mb-2 text-gray-200">
               Apply As
             </label>
-            <div className="flex gap-6 flex-wrap text-gray-300">
+            <div className="flex gap-6 flex-wrap text-gray-400">
               <label className="flex items-center gap-2">
                 <input
                   type="radio"
@@ -153,7 +153,7 @@ export default function JoinClub() {
                   <option value="">Company Size</option>
                   <option>1–10</option>
                   <option>11–50</option>
-                  <option>51–100</option>
+                  <option>50–100</option>
                   <option>100+</option>
                 </select>
                 <input
