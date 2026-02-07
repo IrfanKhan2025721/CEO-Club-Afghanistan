@@ -5,53 +5,16 @@ import { aboutLinks, communityLinks, programsLinks } from "./footerData";
 
 export default function Footer() {
   return (
-    <footer className="bg-black px-4 sm:px-8 md:px-16 pt-[3rem] md:pt-[4rem]">
-      <div className="relative flex flex-col items-center sm:flex-row sm:justify-between gap-[3rem] pb-[2rem] sm:pb-[3rem]">
-        {/* logo */}
-        <div className="flex flex-col items-center justify-center gap-2">
-          <img
-            src="/LOGO2.png"
-            alt="LOGO"
-            className="w-[8rem] sm:w-[10rem] md:w-[12rem] lg:w-[14rem]"
-          />
-
+    <footer className='bg-black px-4 sm:px-8 md:px-16  pt-[3rem] md:pt-[4rem]'>
+      <div className='relative flex flex-col items-center sm:flex-row sm:justify-between gap-[3rem] 2xl:justify-evenly`  pb-[2rem] sm:pb-[3rem]'>
+        {/* logoes */}
+        <div className='flex flex-col items-center justify-center gap-2'>
+          <img src={ceoLogo} alt="" className='w-[8rem] sm:w-[10rem] md:w-[12rem] lg:w-[14rem]'/>
           {/* socials */}
-          <div className="flex gap-[0.5rem] mt-2">
-            <a
-              href="https://www.linkedin.com/company/ceo-club-afghanistan/posts/?feedView=all"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-[#CC8821] transition text-[1rem] sm:text-[1.5rem] md:text-[2rem] lg:text-[2rem]"
-            >
-              <FaLinkedinIn />
-            </a>
-
-            <a
-              href="https://www.facebook.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-[#CC8821] transition text-[1rem] sm:text-[1.5rem] md:text-[2rem] lg:text-[2rem]"
-            >
-              <FaFacebookF />
-            </a>
-
-            <a
-              href="https://www.instagram.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-[#CC8821] transition text-[1rem] sm:text-[1.5rem] md:text-[2rem] lg:text-[2rem]"
-            >
-              <FaInstagram />
-            </a>
-
-            <a
-              href="https://twitter.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-[#CC8821] transition text-[1rem] sm:text-[1.5rem] md:text-[2rem] lg:text-[2rem]"
-            >
-              <FaXTwitter />
-            </a>
+          <div className='flex gap-[0.5rem]'>
+            <img src={facebook} alt="" className='w-[1.2rem] sm:w-[1.5rem]  md:w-[2rem] lg:w-[2.5rem]'/>
+            <img src={instagram} alt="" className='w-[1.2rem] sm:w-[1.5rem] md:w-[2rem] lg:w-[2.5rem]'/>
+            <img src={X} alt="" className='w-[1.2rem] sm:w-[1.5rem] md:w-[2rem] lg:w-[2.5rem]'/>
           </div>
         </div>
 

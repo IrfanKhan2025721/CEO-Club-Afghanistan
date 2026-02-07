@@ -7,9 +7,10 @@ export default function Member() {
   const { id } = useParams();
 
   const member = memberData.find((m) => m.id === Number(id));
-
+  
   if (!member)
     return <p className="text-white text-center mt-20">Member not found</p>;
+
 
   return (
     <main className="my-[3rem] px-4 sm:px-8 md:px-16 bg-black py-[4rem]">
