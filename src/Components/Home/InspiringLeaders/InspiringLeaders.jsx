@@ -1,5 +1,6 @@
 import React from "react";
 import { leaders } from "./InspiringLeadersData";
+import { Link } from "react-router-dom";
 import { motion as Motion } from "framer-motion";
 
 export default function InspiringLeaders() {
@@ -42,6 +43,12 @@ export default function InspiringLeaders() {
       >
         {leaders.map((leader) => {
           return (
+
+            <Link
+              key={leader.id}
+              to={`/member/${leader.id}`}
+            >
+            <div
             <Motion.div
               key={leader.id}
               variants={cardVariants}
@@ -66,6 +73,9 @@ export default function InspiringLeaders() {
                 </a>
                 <img src={leader.companyLogo} alt="" className="w-[2.8rem]" />
               </div>
+            </div>
+    </Link>
+
             </Motion.div>
           );
         })}
