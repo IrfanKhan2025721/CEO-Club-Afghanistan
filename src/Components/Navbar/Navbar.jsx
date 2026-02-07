@@ -33,9 +33,9 @@ export default function Navbar() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4">
-          {/* Main Container - Responsive Height & Padding */}
+          {/* Main Container */}
           <div className="bg-gray-800/80 backdrop-blur-md rounded-full border border-white/10 shadow-2xl px-4 md:px-8 h-16 md:h-20 flex items-center relative overflow-hidden">
-            {/* 1. Left: Logo - Flex basis ensures it takes equal space to the right side */}
+            {/* Logo */}
             <div className="flex items-center justify-start basis-1/4 shrink-0">
               <NavLink to="/">
                 <img
@@ -46,7 +46,7 @@ export default function Navbar() {
               </NavLink>
             </div>
 
-            {/* 2. Center: Navigation Links - Hidden on Mobile, Flex on Tablet/Desktop */}
+            {/* Navigation Links - Hidden on Mobile, Flex on Tablet/Desktop */}
             <div className="hidden md:flex flex-1 justify-center items-center">
               <div className="flex gap-4 lg:gap-10">
                 {navbardata.map((item) => (
@@ -69,7 +69,7 @@ export default function Navbar() {
               </div>
             </div>
 
-            {/* 3. Right: Buttons - Hidden on small mobile, flex on desktop/tablet */}
+            {/* Hidden on small mobile, flex on desktop/tablet */}
             <div className="hidden sm:flex items-center justify-end basis-1/4 shrink-0 gap-2 lg:gap-3">
               <NavLink
                 to="/contact"
@@ -80,7 +80,7 @@ export default function Navbar() {
 
               <NavLink
                 to="/join-club"
-                className="bg-[#BB7D1D] text-sm lg:text-lg text-white rounded-full px-3 lg:px-5 py-1.5 border border-[#BB7D1D] hover:bg-black hover:text-[#BB7D1D] transition font-bold whitespace-nowrap"
+                className="bg-[#BB7D1D] text-sm lg:text-lg text-white rounded-full px-3 lg:px-5 py-1.5 border border-[#BB7D1D] hover:bg-black hover:text-[#BB7D1D] transition font-semibold whitespace-nowrap"
               >
                 Join Club
               </NavLink>

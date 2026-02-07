@@ -1,5 +1,5 @@
 import React from "react";
-// import video from "../../assets/EventImages/leadership event.mp4";
+import video from "../../assets/EventImages/leadership event.mp4";
 import { motion as Motion } from "framer-motion";
 
 export default function EventHero() {
@@ -41,16 +41,14 @@ export default function EventHero() {
 
   return (
     <div className="relative w-full h-screen overflow-hidden">
-      {/* <video
+      <video
         className="absolute top-0 left-0 w-full h-full object-cover"
         src={video}
         autoPlay
         loop
         muted
         playsInline
-      /> */}
-
-    
+      />
 
       <div className="absolute inset-0 bg-black/65"></div>
 
