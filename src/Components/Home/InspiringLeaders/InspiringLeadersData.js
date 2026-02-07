@@ -10,21 +10,21 @@ export{
 
 export const leaders = [
     {
-        id:'1',
+        id:'01',
         name:'Said Shah Ahmadi',
         text:'lorem ispum doler sign is something diffrent that',
         img:leader1,
         companyLogo:upskillLogo
     },
     {
-        id:'2',
+        id:'02',
         name:'Said Shah Ahmadi',
         text:'lorem ispum doler sign is something diffrent that',
         img:leader2,
         companyLogo:upskillLogo
     },
     {
-        id:'3',
+        id:'03',
         name:'Said Shah Ahmadi',
         text:'lorem ispum doler sign is something diffrent that',
         img:leader3,

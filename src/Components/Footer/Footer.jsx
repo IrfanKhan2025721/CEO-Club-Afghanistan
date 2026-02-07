@@ -8,16 +8,16 @@ import { aboutLinks, communityLinks, programsLinks } from './footerData'
 
 export default function Footer() {
   return (
-    <footer className='bg-black px-4 sm:px-8 md:px-16 pt-[3rem] md:pt-[4rem]'>
-      <div className='relative flex flex-col items-center sm:flex-row sm:justify-between gap-[3rem] pb-[2rem] sm:pb-[3rem]'>
+    <footer className='bg-black px-4 sm:px-8 md:px-16  pt-[3rem] md:pt-[4rem]'>
+      <div className='relative flex flex-col items-center sm:flex-row sm:justify-between gap-[3rem] 2xl:justify-evenly`  pb-[2rem] sm:pb-[3rem]'>
         {/* logoes */}
         <div className='flex flex-col items-center justify-center gap-2'>
           <img src={ceoLogo} alt="" className='w-[8rem] sm:w-[10rem] md:w-[12rem] lg:w-[14rem]'/>
           {/* socials */}
           <div className='flex gap-[0.5rem]'>
-            <img src={facebook} alt="" className='w-[1rem] sm:w-[1.5rem]  md:w-[2rem] lg:w-[2.5rem]'/>
-            <img src={instagram} alt="" className='w-[1rem] sm:w-[1.5rem] md:w-[2rem] lg:w-[2.5rem]'/>
-            <img src={X} alt="" className='w-[1rem] sm:w-[1.5rem] md:w-[2rem] lg:w-[2.5rem]'/>
+            <img src={facebook} alt="" className='w-[1.2rem] sm:w-[1.5rem]  md:w-[2rem] lg:w-[2.5rem]'/>
+            <img src={instagram} alt="" className='w-[1.2rem] sm:w-[1.5rem] md:w-[2rem] lg:w-[2.5rem]'/>
+            <img src={X} alt="" className='w-[1.2rem] sm:w-[1.5rem] md:w-[2rem] lg:w-[2.5rem]'/>
           </div>
         </div>
         {/* links */}
@@ -29,14 +29,14 @@ export default function Footer() {
                 return(
                   <>
                     <h3 className='text-white font-bold text-[0.7rem] sm:text-[0.8rem] md:text-[1rem] '>{link.title}</h3>
-                    <li key={index} className='text-[rgba(153,153,153,1)] text-[0.5rem] sm:text-[0.7rem] md:text-[0.8rem]  mt-[0.3rem]'>
+                    <li key={index} className='text-[rgba(153,153,153,1)] text-[0.9rem] sm:text-[1rem] md:text-[1.2rem] xlg:text-[1.4rem] mt-[0.3rem]'>
                     <a href="#">{link.link_1}</a>
                     </li>
                     <li key={index}>
-                      <a href="#" className='text-[rgba(153,153,153,1)] text-[0.5rem] sm:text-[0.7rem] md:text-[0.8rem] '>{link.link_2}</a>
+                      <a href="#" className='text-[rgba(153,153,153,1)] text-[0.9rem] sm:text-[1rem] md:text-[1.2rem] xlg:text-[1.4rem]'>{link.link_2}</a>
                     </li>
                     <li key={index}>
-                      <a href="#" className='text-[rgba(153,153,153,1)] text-[0.5rem] sm:text-[0.7rem] md:text-[0.8rem] '>{link.link_3}</a>
+                      <a href="#" className='text-[rgba(153,153,153,1)] text-[0.9rem] sm:text-[1rem] md:text-[1.2rem] xlg:text-[1.4rem]'>{link.link_3}</a>
                     </li>
                   </>
                 )
@@ -50,14 +50,14 @@ export default function Footer() {
                 return(
                   <>
                     <h3 className='text-white font-bold text-[0.7rem] sm:text-[0.8rem] md:text-[1rem] '>{link.title}</h3>
-                    <li key={index} className='text-[rgba(153,153,153,1)] text-[0.5rem] sm:text-[0.7rem] md:text-[0.8rem]  mt-[0.3rem]'>
+                    <li key={index} className='text-[rgba(153,153,153,1)] text-[0.9rem] sm:text-[1rem] md:text-[1.2rem] xlg:text-[1.4rem]  mt-[0.3rem]'>
                     <a href="#">{link.link_1}</a>
                     </li>
                     <li key={index}>
-                      <a href="#" className='text-[rgba(153,153,153,1)] text-[0.5rem] sm:text-[0.7rem] md:text-[0.8rem] '>{link.link_2}</a>
+                      <a href="#" className='text-[rgba(153,153,153,1)] text-[0.9rem] sm:text-[1rem] md:text-[1.2rem] xlg:text-[1.4rem]'>{link.link_2}</a>
                     </li>
                     <li key={index}>
-                      <a href="#" className='text-[rgba(153,153,153,1)] text-[0.5rem] sm:text-[0.7rem] md:text-[0.8rem] '>{link.link_3}</a>
+                      <a href="#" className='text-[rgba(153,153,153,1)] text-[0.9rem] sm:text-[1rem] md:text-[1.2rem] xlg:text-[1.4rem]'>{link.link_3}</a>
                     </li>
                   </>
                 )
@@ -71,14 +71,14 @@ export default function Footer() {
                 return(
                   <>
                     <h3 className='text-white font-bold text-[0.7rem] sm:text-[0.8rem] md:text-[1rem] '>{link.title}</h3>
-                    <li key={index} className='text-[rgba(153,153,153,1)] text-[0.5rem] sm:text-[0.7rem] md:text-[0.8rem]  mt-[0.3rem]'>
+                    <li key={index} className='text-[rgba(153,153,153,1)] text-[0.9rem] sm:text-[1rem] md:text-[1.2rem] xlg:text-[1.4rem] mt-[0.3rem]'>
                     <a href="#">{link.link_1}</a>
                     </li>
                     <li key={index}>
-                      <a href="#" className='text-[rgba(153,153,153,1)] text-[0.5rem] sm:text-[0.7rem] md:text-[0.8rem] '>{link.link_2}</a>
+                      <a href="#" className='text-[rgba(153,153,153,1)] text-[0.9rem] sm:text-[1rem] md:text-[1.2rem] xlg:text-[1.4rem]'>{link.link_2}</a>
                     </li>
                     <li key={index}>
-                      <a href="#" className='text-[rgba(153,153,153,1)] text-[0.5rem] sm:text-[0.7rem] md:text-[0.8rem] '>{link.link_3}</a>
+                      <a href="#" className='text-[rgba(153,153,153,1)] text-[0.9rem] sm:text-[1rem] md:text-[1.2rem] xlg:text-[1.4rem]'>{link.link_3}</a>
                     </li>
                   </>
                 )

@@ -1,5 +1,6 @@
 import React from "react";
 import { leaders } from "./InspiringLeadersData";
+import { Link } from "react-router-dom";
 
 export default function InspiringLeaders() {
   return (
@@ -18,6 +19,11 @@ export default function InspiringLeaders() {
         {/* leader */}
         {leaders.map((leader) => {
           return (
+
+            <Link
+              key={leader.id}
+              to={`/member/${leader.id}`}
+            >
             <div
               key={leader.id}
               className="bg-[rgba(34,34,34,1)] rounded-[10px] flex flex-col items-center gap-4 p-[0.6rem]"
@@ -43,6 +49,8 @@ export default function InspiringLeaders() {
                 <img src={leader.companyLogo} alt="" className="w-[2.8rem]" />
               </div>
             </div>
+    </Link>
+
           );
         })}
       </div>
