@@ -48,10 +48,4 @@ const speakersData = [
   },
 ];
 
-
 export default speakersData;
-
-
-
-
-

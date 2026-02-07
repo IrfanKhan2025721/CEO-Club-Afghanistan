@@ -48,7 +48,7 @@ const upcomingEvent = [
     id: 3,
     title: "Startup Pitch Night",
     description:
-     "An exciting evening where local startups pitch their ideas to investors, mentors, and the tech community. Attendees will learn about entrepreneurship, funding strategies, and building scalable businesses. Each startup will present their product, market strategy, and growth plans. Panel discussions will provide insights into investor expectations and success factors. Networking sessions allow participants to connect with founders, investors, and potential collaborators. Mentorship opportunities will be offered for early-stage startups.",
+      "An exciting evening where local startups pitch their ideas to investors, mentors, and the tech community. Attendees will learn about entrepreneurship, funding strategies, and building scalable businesses. Each startup will present their product, market strategy, and growth plans. Panel discussions will provide insights into investor expectations and success factors. Networking sessions allow participants to connect with founders, investors, and potential collaborators. Mentorship opportunities will be offered for early-stage startups.",
     date: "June 12, 2025",
     time: "06:00 – 09:00 PM",
     location: "Startup Lounge, Kabul",

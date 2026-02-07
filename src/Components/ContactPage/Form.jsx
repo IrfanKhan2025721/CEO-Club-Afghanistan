@@ -4,7 +4,6 @@ import hero from "../../assets/ContacImages/Capture.PNG";
 export default function Form() {
   return (
     <div className="">
-      {/* text */}
       <div className="bg-black px-2  pt-[4rem]  lg:pb-[4rem] lg:pt-[8rem] leading-[1.5rem] sm:leading-[2rem] md:leading-[2.2rem] lg:leading-[2.4rem] text-center text-white font-bold sm:px-[3rem] md:px-[4rem] sm:text-[1.4rem] md:text-[1.8rem] lg:text-[2.2rem]">
         <p>
           We’d love to hear from you — whether{" "}
@@ -17,12 +16,10 @@ export default function Form() {
         </p>
       </div>
 
-      {/* Form */}
       <section className="pt-[4rem] pb-[7rem] px-6 bg-black flex flex-col lg:flex-row gap-[4rem] xlg:gap-[2rem]">
         <form
           onSubmit={(e) => {
             e.preventDefault();
-            // handle submit later
           }}
           className="flex flex-col gap-6 rounded-[1.5rem] p-8 w-full lg:w-1/2 shadow-[0_0_20px_rgba(204,136,33,0.6)]"
         >

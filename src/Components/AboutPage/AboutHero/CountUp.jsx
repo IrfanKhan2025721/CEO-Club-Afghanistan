@@ -21,7 +21,6 @@ export default function CountUp({
 
   const springValue = useSpring(motionValue, { damping, stiffness });
 
-  // Trigger every time component comes into view
   const isInView = useInView(ref, { margin: "0px" });
 
   const getDecimalPlaces = (num) => {
@@ -53,14 +52,12 @@ export default function CountUp({
     [maxDecimals, separator],
   );
 
-  // Initialize the number on mount or reset
   useEffect(() => {
     if (ref.current) {
       ref.current.textContent = formatValue(direction === "down" ? to : from);
     }
   }, [from, to, direction, formatValue]);
 
-  // Animate when in view
   useEffect(() => {
     if (isInView && startWhen) {
       if (typeof onStart === "function") onStart();
@@ -81,7 +78,6 @@ export default function CountUp({
         clearTimeout(durationTimeoutId);
       };
     } else if (!isInView) {
-      // Reset value when out of view
       motionValue.set(direction === "down" ? to : from);
     }
   }, [
@@ -100,7 +96,7 @@ export default function CountUp({
   useEffect(() => {
     const unsubscribe = springValue.on("change", (latest) => {
       if (ref.current) {
-        ref.current.textContent = formatValue(latest) + "+" ;
+        ref.current.textContent = formatValue(latest) + "+";
       }
     });
     return () => unsubscribe();
