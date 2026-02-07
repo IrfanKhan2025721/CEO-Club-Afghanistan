@@ -1,34 +1,50 @@
-import React from 'react'
+import React from "react";
+import { motion as Motion } from "framer-motion";
 
 export default function JoinTeam() {
+  const containerVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
-    <div className='bg-black px-4 sm:px-8 md:px-16 py-10'>
-      
-      <h1 className='
-        text-xl 
-        sm:text-2xl 
-        md:text-3xl 
-        font-bold 
-        text-white 
-        text-center
-      '>
+    <Motion.div
+      className="bg-black px-4 sm:px-8 md:px-16 py-40"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={containerVariants}
+    >
+      <Motion.h1
+        variants={itemVariants}
+        className="text-xl sm:text-2xl md:text-3xl font-bold text-white text-center"
+      >
         Be Part of Afghanistan’s Leadership Movement
-      </h1>
+      </Motion.h1>
 
-      <p className='
-        text-white 
-        text-center 
-        mt-4 
-        mb-6 
-        text-sm 
-        sm:text-base
-      '>
-        Join a trusted network <br className='hidden sm:block' />
+      <Motion.p
+        variants={itemVariants}
+        className="text-white text-center mt-4 mb-6 text-lg sm:text-2xl"
+      >
+        Join a trusted network <br className="hidden sm:block" />
         shaping the country’s future.
-      </p>
+      </Motion.p>
 
-      <div className='flex justify-center'>
-        <button className='
+      <Motion.div variants={itemVariants} className="flex justify-center mt-10">
+        <button
+          className="
           bg-gradient-to-r 
           from-black 
           to-[#D28B1D] 
@@ -41,11 +57,11 @@ export default function JoinTeam() {
           text-sm 
           sm:text-base 
           text-white
-        '>
-          Apply for Member ship
+        "
+        >
+          Apply for Membership
         </button>
-      </div>
-
-    </div>
-  )
+      </Motion.div>
+    </Motion.div>
+  );
 }
