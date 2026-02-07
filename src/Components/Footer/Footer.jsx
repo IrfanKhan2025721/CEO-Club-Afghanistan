@@ -1,4 +1,8 @@
 import React from "react";
+import facebook from "../../assets/HomeImages/facebook.png";
+import ceoLogo from "../../assets/HomeImages/ceoLogo.png";
+import instagram from "../../assets/HomeImages/instagram.png";
+import X from "../../assets/HomeImages/X.png";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { aboutLinks, communityLinks, programsLinks } from "./footerData";
@@ -7,6 +11,31 @@ export default function Footer() {
   return (
     <footer className="bg-black px-4 sm:px-8 md:px-16 pt-[3rem] md:pt-[4rem]">
       <div className="relative flex flex-col items-center sm:flex-row sm:justify-between gap-[3rem] pb-[2rem] sm:pb-[3rem]">
+        <div className="flex flex-col items-center justify-center gap-2">
+          <img
+            src={ceoLogo}
+            alt=""
+            className="w-[8rem] sm:w-[10rem] md:w-[12rem] lg:w-[14rem]"
+          />
+          <div className="flex gap-[0.5rem]">
+            <img
+              src={facebook}
+              alt=""
+              className="w-[1rem] sm:w-[1.5rem]  md:w-[2rem] lg:w-[2.5rem]"
+            />
+            <img
+              src={instagram}
+              alt=""
+              className="w-[1rem] sm:w-[1.5rem] md:w-[2rem] lg:w-[2.5rem]"
+            />
+            <img
+              src={X}
+              alt=""
+              className="w-[1rem] sm:w-[1.5rem] md:w-[2rem] lg:w-[2.5rem]"
+            />
+          </div>
+        </div>
+        <div className="flex justify-between items-center w-full sm:w-auto gap-[4rem]">
         {/* logoes */}
         <div className="flex flex-col items-center justify-center gap-2">
           <img
@@ -91,7 +120,6 @@ export default function Footer() {
               })}
             </ul>
           </div>
-          {/* community_links */}
           <div>
             <ul className="flex flex-col gap-2">
               {communityLinks.map((link, index) => {
@@ -127,7 +155,6 @@ export default function Footer() {
               })}
             </ul>
           </div>
-          {/* programs_links */}
           <div>
             <ul className="flex flex-col gap-2">
               {programsLinks.map((link, index) => {

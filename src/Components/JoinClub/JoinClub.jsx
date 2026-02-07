@@ -45,7 +45,6 @@ export default function JoinClub() {
           Membership Application Form
         </p>
 
-        {/* SUCCESS MESSAGE */}
         {success && (
           <div className="mb-6 flex items-center gap-3 bg-green-900/30 border border-green-800 text-green-400 px-4 py-3 rounded-xl">
             <span className="text-xl">✅</span>
@@ -54,7 +53,6 @@ export default function JoinClub() {
         )}
 
         <form onSubmit={handleSubmit}>
-          {/* BASIC INFO */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
             <input
               name="full_name"
@@ -83,7 +81,6 @@ export default function JoinClub() {
             />
           </div>
 
-          {/* APPLICATION TYPE */}
           <div className="mb-6">
             <label className="font-semibold block mb-2 text-gray-200">
               Apply As
@@ -120,7 +117,6 @@ export default function JoinClub() {
             </div>
           </div>
 
-          {/* COMPANY FORM */}
           {type === "company" && (
             <div className="mb-6">
               <h2 className={sectionTitle}>Company Information</h2>
@@ -170,7 +166,6 @@ export default function JoinClub() {
             </div>
           )}
 
-          {/* EMPLOYEE FORM */}
           {type === "employee" && (
             <div className="mb-6">
               <h2 className={sectionTitle}>Professional Information</h2>
@@ -212,7 +207,6 @@ export default function JoinClub() {
             </div>
           )}
 
-          {/* MEMBER FORM */}
           {type === "member" && (
             <div className="mb-6">
               <h2 className={sectionTitle}>Member Information</h2>
@@ -246,7 +240,6 @@ export default function JoinClub() {
             </div>
           )}
 
-          {/* PURPOSE */}
           <div className="mb-6">
             <textarea
               name="message"
@@ -256,7 +249,6 @@ export default function JoinClub() {
             />
           </div>
 
-          {/* AGREEMENT */}
           <div className="mb-6">
             <label className="flex items-center gap-2 text-sm text-gray-300">
               <input
@@ -268,7 +260,6 @@ export default function JoinClub() {
             </label>
           </div>
 
-          {/* SUBMIT */}
           <button
             type="submit"
             className="w-full bg-[#CC8821] text-white py-3 rounded-xl font-semibold hover:bg-[#b8781e] transition"

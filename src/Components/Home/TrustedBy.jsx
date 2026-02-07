@@ -57,9 +57,9 @@ const logos = [
 export default function TrustedBy() {
   return (
     <div className="relative mt-10 bg-black py-12 overflow-hidden">
-        <h2 className="text-2xl md:text-3xl text-white text-center font-semibold  mb-20">
-          Trusted By
-        </h2>
+      <h2 className="text-2xl md:text-3xl text-white text-center font-semibold  mb-20">
+        Trusted By
+      </h2>
 
       {/* Side shadow overlays */}
       <div className="hidden md:block pointer-events-none absolute top-0 left-0 h-full w-80 bg-gradient-to-r from-black z-20" />
@@ -68,7 +68,7 @@ export default function TrustedBy() {
       <Swiper
         modules={[Autoplay]}
         loop={true}
-        allowTouchMove={true} // disable dragging
+        allowTouchMove={true}
         speed={3000}
         autoplay={{
           delay: 0,
@@ -88,7 +88,6 @@ export default function TrustedBy() {
             key={`${logo.id}-${idx}`}
             className="flex justify-center"
           >
-            {/* Responsive width container */}
             <div className="w-24 sm:w-28 md:w-32 lg:w-40 flex justify-center">
               <img
                 src={logo.src}

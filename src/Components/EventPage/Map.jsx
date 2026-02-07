@@ -3,8 +3,8 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+import { motion as Motion } from "framer-motion";
 
-/* Fix Leaflet marker icon */
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconRetinaUrl:
@@ -15,8 +15,6 @@ L.Icon.Default.mergeOptions({
 
 export default function Map() {
   const mapRef = useRef(null);
-
-  // Updated coordinates for Kart-e-Char, Sun Tower Plaza, Kabul
   const position = [34.50725, 69.1406];
 
   const venue = {
@@ -32,27 +30,57 @@ export default function Map() {
     }
   };
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.5,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
   return (
-    <div className="w-full py-8 px-4 sm:px-6">
-      {" "}
-      {/* Added bg-gray-900 for text-white visibility */}
+    <Motion.div
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      className="w-full py-8 px-4 sm:px-6 overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto mb-4">
-        <h1 className="text-3xl font-bold text-white text-left mb-10">
+        <Motion.h1
+          variants={itemVariants}
+          className="text-3xl font-bold text-white text-left mb-10"
+        >
           Here you go <span className="text-yellow-500">Venue</span>
-        </h1>
+        </Motion.h1>
       </div>
+
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8">
-        <div className="w-full lg:w-1/2 h-64 sm:h-72 rounded-lg overflow-hidden shadow-md">
+        <Motion.div
+          variants={itemVariants}
+          className="w-full lg:w-1/2 h-64 sm:h-72 rounded-lg overflow-hidden shadow-md"
+        >
           <MapContainer
             center={position}
             zoom={15}
             scrollWheelZoom={true}
             className="h-full w-full"
-            ref={mapRef} // Standard way to attach ref in React Leaflet v4+
+            ref={mapRef}
           >
             <TileLayer
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-              attribution='&copy; <a href="https://www.openstreetmap.org">OpenStreetMap</a> contributors'
+              attribution='&copy; <a href="https://www.openstreetmap.org">OpenStreetMap</a>'
             />
             <Marker position={position}>
               <Popup>
@@ -60,17 +88,24 @@ export default function Map() {
               </Popup>
             </Marker>
           </MapContainer>
-        </div>
+        </Motion.div>
 
-        <div className="w-full lg:w-1/2 h-auto lg:h-72 bg-white rounded-t-2xl shadow-md overflow-hidden">
+        <Motion.div
+          variants={itemVariants}
+          className="w-full lg:w-1/2 h-auto lg:h-72 bg-white rounded-t-2xl shadow-md overflow-hidden"
+        >
           <div className="bg-[#CC8821] p-4">
             <h2 className="text-2xl sm:text-3xl font-bold text-white">
               {venue.name}
             </h2>
           </div>
 
-          <ul className="p-6 space-y-4 text-gray-700">
-            <li
+          <Motion.ul
+            variants={containerVariants}
+            className="p-6 space-y-4 text-gray-700"
+          >
+            <Motion.li
+              variants={itemVariants}
               onClick={() => {
                 focusMap();
                 window.open(
@@ -82,17 +117,19 @@ export default function Map() {
             >
               <FaMapMarkerAlt className="mt-1 text-[#CC8821] flex-shrink-0" />
               <div>{venue.address}</div>
-            </li>
+            </Motion.li>
 
-            <li
+            <Motion.li
+              variants={itemVariants}
               onClick={() => (window.location.href = `mailto:${venue.email}`)}
               className="flex text-lg font-semibold items-center gap-3 cursor-pointer hover:text-yellow-600 transition-colors"
             >
               <FaEnvelope className="text-[#CC8821] flex-shrink-0" />
               {venue.email}
-            </li>
+            </Motion.li>
 
-            <li
+            <Motion.li
+              variants={itemVariants}
               onClick={() =>
                 window.open(
                   `https://wa.me/${venue.phone.replace(/\D/g, "")}`,
@@ -103,10 +140,10 @@ export default function Map() {
             >
               <FaPhoneAlt className="text-[#CC8821] flex-shrink-0" />
               {venue.phone}
-            </li>
-          </ul>
-        </div>
+            </Motion.li>
+          </Motion.ul>
+        </Motion.div>
       </div>
-    </div>
+    </Motion.div>
   );
 }

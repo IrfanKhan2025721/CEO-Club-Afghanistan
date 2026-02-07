@@ -14,7 +14,6 @@ export default function Member() {
   return (
     <main className="my-[3rem] px-4 sm:px-8 md:px-16 bg-black py-[4rem]">
       <div className="flex flex-col gap-10 sm:flex-row sm:justify-between sm:gap-16">
-        {/* Image */}
         <div className="w-full sm:w-[50%]">
           <img
             src={member.image}
@@ -23,7 +22,6 @@ export default function Member() {
           />
         </div>
 
-        {/* Content */}
         <div className="flex flex-col gap-6 sm:w-[50%]">
           <h2 className="text-white font-bold text-[2.5rem]">
             {member.name}{" "}
@@ -43,7 +41,6 @@ export default function Member() {
         </div>
       </div>
 
-      {/* Founder Story / Social Buttons */}
       <MemberStory />
     </main>
   );
