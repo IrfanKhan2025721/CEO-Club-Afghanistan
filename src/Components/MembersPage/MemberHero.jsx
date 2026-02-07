@@ -39,7 +39,7 @@ export default function AboutHero() {
       >
         <Motion.h1
           variants={itemVariants}
-          className="text-5xl md:text-5xl font-extrabold mb-4 tracking-tight uppercase"
+          className="text-5xl md:text-5xl font-bold mb-4 tracking-tight"
         >
           Club Members
         </Motion.h1>

@@ -50,6 +50,8 @@ export default function EventHero() {
         playsInline
       /> */}
 
+    
+
       <div className="absolute inset-0 bg-black/65"></div>
 
       <Motion.div
