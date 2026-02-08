@@ -52,7 +52,7 @@ export default function Speaker() {
 
         <Motion.div
           variants={itemVariants}
-          className="relative w-full max-w-[16rem] md:max-w-[27rem] h-[16rem] md:h-[27rem] overflow-hidden rounded-md shadow-lg md:ml-auto"
+          className="relative w-full max-w-[16rem] md:max-w-[27rem] h-[16rem] md:h-[27rem] overflow-hidden shadow-lg md:ml-auto"
         >
           <img
             src={ceo.img}
