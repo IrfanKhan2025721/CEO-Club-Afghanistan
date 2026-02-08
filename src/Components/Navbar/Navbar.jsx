@@ -26,7 +26,7 @@ export default function Navbar() {
   return (
     <div className="pt-20">
       <nav
-        className={`fixed top-4 w-full z-50 transition-all duration-500 ${
+        className={`fixed top-4 w-full z-[1001] transition-all duration-500 ${
           showNavbar
             ? "opacity-100 translate-y-0"
             : "opacity-0 -translate-y-10 pointer-events-none"

@@ -47,7 +47,7 @@ export default function Leadership() {
         </p>
       </Motion.div>
 
-      <div className="absolute left-7 lg:left-1/2 top-[27rem] w-[2px] bg-yellow-400 -translate-x-1/2 h-[123rem] md:h-[90yrem] lg:h-[50rem] xl:h-[55rem] 2xl:h-[59rem]"></div>
+      <div className="absolute left-7 lg:left-1/2 top-[27rem] w-[2px] bg-yellow-400 -translate-x-1/2 h-[123rem] md:h-[90rem] lg:h-[50rem] xl:h-[55rem] 2xl:h-[59rem]"></div>
 
       <div className="space-y-16 lg:space-y-28">
         {leadersData.map((leader, index) => {
