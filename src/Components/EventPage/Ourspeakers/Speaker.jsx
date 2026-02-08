@@ -53,7 +53,7 @@ export default function Speaker() {
         {/* CEO Card - Added 'group' to the outer wrapper */}
         <Motion.div
           variants={itemVariants}
-          className="group relative w-full max-w-[16rem] md:max-w-[27rem] h-[16rem] md:h-[27rem] overflow-hidden rounded-md shadow-lg md:ml-auto cursor-pointer"
+          className="relative w-full max-w-[16rem] md:max-w-[27rem] h-[16rem] md:h-[27rem] overflow-hidden shadow-lg md:ml-auto"
         >
           {/* Image Zoom Effect */}
           <img
