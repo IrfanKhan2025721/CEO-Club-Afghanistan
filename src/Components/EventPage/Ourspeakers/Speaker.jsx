@@ -52,17 +52,17 @@ export default function Speaker() {
 
         <Motion.div
           variants={itemVariants}
-          className="relative w-full max-w-[16rem] md:max-w-[27rem] h-[16rem] md:h-[27rem] overflow-hidden shadow-lg md:ml-auto"
+          className="group cursor-pointer relative w-full max-w-[16rem] md:max-w-[27rem] h-[16rem] md:h-[27rem] overflow-hidden shadow-lg md:ml-auto"
         >
           <img
             src={ceo.img}
             alt={ceo.name}
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
           />
-          
+
           <div className="absolute bottom-4 left-3 right-3 bg-white p-2 md:p-4 border-l-4 md:border-l-8 border-[#CC8821] overflow-hidden">
             <span className="absolute inset-0 bg-[#CC8821] scale-x-0 origin-left transition-transform duration-700 group-hover:scale-x-100" />
-            
+
             <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4">
               <div className="flex-1">
                 <h2 className="text-lg md:text-xl font-bold text-black group-hover:text-white transition-colors duration-300">
@@ -75,17 +75,32 @@ export default function Speaker() {
 
               <div className="flex gap-2 sm:gap-3 opacity-0 translate-x-4 transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-0">
                 {ceo.social?.facebook && (
-                  <a href={ceo.social.facebook} target="_blank" rel="noopener noreferrer" className="text-black bg-white p-2 sm:p-3 rounded-full hover:scale-110 transition-all duration-300 hover:bg-blue-600 hover:text-white shadow-md">
+                  <a
+                    href={ceo.social.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-black bg-white p-2 sm:p-3 rounded-full hover:scale-110 transition-all duration-300 hover:bg-blue-600 hover:text-white shadow-md"
+                  >
                     <FaFacebookF className="text-xl sm:text-2xl" />
                   </a>
                 )}
                 {ceo.social?.whatsapp && (
-                  <a href={ceo.social.whatsapp} target="_blank" rel="noopener noreferrer" className="text-black bg-white rounded-full p-2 sm:p-3 hover:scale-110 transition-all duration-300 hover:bg-green-600 hover:text-white shadow-md">
+                  <a
+                    href={ceo.social.whatsapp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-black bg-white rounded-full p-2 sm:p-3 hover:scale-110 transition-all duration-300 hover:bg-green-600 hover:text-white shadow-md"
+                  >
                     <FaWhatsapp className="text-xl sm:text-2xl" />
                   </a>
                 )}
                 {ceo.social?.linkedin && (
-                  <a href={ceo.social.linkedin} target="_blank" rel="noopener noreferrer" className="text-black bg-white rounded-full p-2 sm:p-3 hover:scale-110 transition-all duration-300 hover:bg-blue-700 hover:text-white shadow-md">
+                  <a
+                    href={ceo.social.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-black bg-white rounded-full p-2 sm:p-3 hover:scale-110 transition-all duration-300 hover:bg-blue-700 hover:text-white shadow-md"
+                  >
                     <FaLinkedinIn className="text-xl sm:text-2xl" />
                   </a>
                 )}
@@ -113,7 +128,7 @@ export default function Speaker() {
               alt={speaker.name}
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
-            
+
             <div className="absolute bottom-4 left-3 right-3 bg-white p-5 border-l-8 border-[#CC8821] overflow-hidden">
               <span className="absolute inset-0 bg-[#CC8821] scale-x-0 origin-left transition-transform duration-700 group-hover:scale-x-100" />
 
@@ -126,15 +141,25 @@ export default function Speaker() {
                     {speaker.position}
                   </p>
                 </div>
-                
+
                 <div className="flex gap-2 opacity-0 translate-x-4 transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-0">
                   {speaker.social?.whatsapp && (
-                    <a href={speaker.social.whatsapp} target="_blank" rel="noopener noreferrer" className="text-black rounded-full bg-white p-1.5 hover:scale-110 transition hover:bg-green-600 hover:text-white">
+                    <a
+                      href={speaker.social.whatsapp}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-black rounded-full bg-white p-1.5 hover:scale-110 transition hover:bg-green-600 hover:text-white"
+                    >
                       <FaWhatsapp className="text-2xl" />
                     </a>
                   )}
                   {speaker.social?.linkedin && (
-                    <a href={speaker.social.linkedin} target="_blank" rel="noopener noreferrer" className="text-black rounded-full bg-white p-1.5 hover:scale-110 transition hover:bg-blue-700 hover:text-white">
+                    <a
+                      href={speaker.social.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-black rounded-full bg-white p-1.5 hover:scale-110 transition hover:bg-blue-700 hover:text-white"
+                    >
                       <FaLinkedinIn className="text-2xl" />
                     </a>
                   )}
