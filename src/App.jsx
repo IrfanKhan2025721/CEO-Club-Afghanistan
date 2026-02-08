@@ -42,9 +42,13 @@ import JoinForm from "./Components/JoinClub/JoinClub";
 // Footer
 import Footer from "./Components/Footer/Footer";
 
+// ScrollToTop
+import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
+
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop/>
       <Navbar />
       <Routes>
         {/* Home Page */}
