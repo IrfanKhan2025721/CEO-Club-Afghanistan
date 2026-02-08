@@ -50,12 +50,10 @@ export default function Speaker() {
           </p>
         </Motion.div>
 
-        {/* CEO Card - Added 'group' to the outer wrapper */}
         <Motion.div
           variants={itemVariants}
           className="group relative w-full max-w-[16rem] md:max-w-[27rem] h-[16rem] md:h-[27rem] overflow-hidden rounded-md shadow-lg md:ml-auto cursor-pointer"
         >
-          {/* Image Zoom Effect */}
           <img
             src={ceo.img}
             alt={ceo.name}
@@ -63,7 +61,6 @@ export default function Speaker() {
           />
           
           <div className="absolute bottom-4 left-3 right-3 bg-white p-2 md:p-4 border-l-4 md:border-l-8 border-[#CC8821] overflow-hidden">
-            {/* Background Overlay */}
             <span className="absolute inset-0 bg-[#CC8821] scale-x-0 origin-left transition-transform duration-700 group-hover:scale-x-100" />
             
             <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4">
@@ -98,7 +95,6 @@ export default function Speaker() {
         </Motion.div>
       </Motion.div>
 
-      {/* Others Grid */}
       <Motion.div
         variants={containerVariants}
         initial="hidden"
@@ -112,7 +108,6 @@ export default function Speaker() {
             variants={itemVariants}
             className="group relative w-full max-w-xs h-64 overflow-hidden shadow-md mx-auto cursor-pointer"
           >
-            {/* Image Zoom Effect */}
             <img
               src={speaker.img}
               alt={speaker.name}
@@ -120,7 +115,6 @@ export default function Speaker() {
             />
             
             <div className="absolute bottom-4 left-3 right-3 bg-white p-5 border-l-8 border-[#CC8821] overflow-hidden">
-              {/* Background Overlay */}
               <span className="absolute inset-0 bg-[#CC8821] scale-x-0 origin-left transition-transform duration-700 group-hover:scale-x-100" />
 
               <div className="relative z-10 flex items-center justify-between">
