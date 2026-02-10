@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { clubMember } from "./clubMemberData";
+import { memberData } from "../../MembersPage/SingleMemberPage/memberData";
 import { Link } from "react-router-dom";
 import { motion as Motion, AnimatePresence } from "framer-motion";
+import { FaLinkedin } from "react-icons/fa";
 
 export default function ClubMember() {
   const [expanded, setExpanded] = useState(false);
-
-  const visibleMembers = expanded ? clubMember : clubMember.slice(0, 6);
+  const visibleMembers = expanded ? memberData : memberData.slice(0, 6);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -29,6 +29,18 @@ export default function ClubMember() {
         ease: "easeOut",
       },
     },
+  };
+
+  const handleLinkedInClick = (e, linkedinUrl) => {
+    e.preventDefault();
+    e.stopPropagation();
+    console.log("LinkedIn URL:", linkedinUrl); // Debug log
+
+    if (linkedinUrl && linkedinUrl !== "#") {
+      window.open(linkedinUrl, "_blank", "noopener,noreferrer");
+    } else {
+      console.error("No LinkedIn URL provided");
+    }
   };
 
   return (
@@ -60,43 +72,57 @@ export default function ClubMember() {
         <AnimatePresence>
           {visibleMembers.map((member) => (
             <Motion.div key={member.id} variants={cardVariants} layout>
-              <Link
-                to={`/members/${member.id}`}
-                className="group bg-white rounded-2xl flex flex-col justify-between p-6 min-h-[28rem] h-full transition-all duration-300 hover:shadow-[0_0_40px_rgba(210,139,29,0.35)]"
-              >
-                <div className="overflow-hidden rounded-xl w-full h-72">
+              <div className="group bg-white rounded-2xl flex flex-col justify-between p-6 min-h-[28rem] h-full transition-all duration-300 hover:shadow-[0_0_40px_rgba(210,139,29,0.35)]">
+                {/* Image */}
+                <Link
+                  to={`/members/${member.id}`}
+                  className="overflow-hidden rounded-xl w-full h-72 block"
+                >
                   <img
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    src={member.img}
-                    alt={member.name}
+                    src={member.image}
+                    alt={`${member.name} ${member.lastName}`}
                   />
-                </div>
+                </Link>
 
                 <div className="flex justify-between items-center mt-6 px-2">
-                  <div className="flex-1 flex flex-col gap-2 text-left">
-                    <h1 className="text-black font-semibold text-lg sm:text-xl">
-                      {member.name}
+                  {/* Name and Role */}
+                  <Link
+                    to={`/members/${member.id}`}
+                    className="flex-1 flex flex-col gap-2 text-left"
+                  >
+                    <h1 className="text-black font-semibold text-lg sm:text-xl hover:underline">
+                      {member.name} {member.lastName}
                     </h1>
                     <span className="text-[#D28B1D] text-sm sm:text-base">
-                      {member.text}
+                      {member.role}
                     </span>
-                  </div>
+                  </Link>
 
-                  <div className="ml-4 flex-shrink-0">
-                    <img
-                      src={member.companyLogo}
-                      alt="Company Logo"
-                      className="w-12 h-12 object-contain opacity-80 group-hover:opacity-100 transition"
-                    />
-                  </div>
+                  {/* LinkedIn Icon */}
+                  {(member.linkedin || member.lilink) && (
+                    <div className="ml-4 flex-shrink-0">
+                      <button
+                        onClick={(e) =>
+                          handleLinkedInClick(
+                            e,
+                            member.linkedin || member.lilink,
+                          )
+                        }
+                        className="text-blue-600 hover:text-blue-800 focus:outline-none p-2"
+                      >
+                        <FaLinkedin className="w-8 h-8 object-contain opacity-80 hover:opacity-100 transition" />
+                      </button>
+                    </div>
+                  )}
                 </div>
-              </Link>
+              </div>
             </Motion.div>
           ))}
         </AnimatePresence>
       </Motion.div>
 
-      {clubMember.length > 6 && (
+      {memberData.length > 6 && (
         <Motion.button
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
