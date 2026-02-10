@@ -55,7 +55,7 @@ export default function MemberStory() {
                 icon={FaSquareXTwitter}
                 text="Twitter"
                 href={member.xlink}
-                bg="#000000"
+                bg="#0A66C2"
               />
             </div>
           )}
