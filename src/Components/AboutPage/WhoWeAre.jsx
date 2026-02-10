@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import whoWeAre from "../../assets/AboutImg/whoWeAre.svg";
+import whoWeAre from "../../assets/AboutImages/whoWeAre.svg";
 import { motion as Motion } from "framer-motion";
 
 export default function WhoWeAre() {
