@@ -34,7 +34,7 @@ export default function ClubMember() {
   const handleLinkedInClick = (e, linkedinUrl) => {
     e.preventDefault();
     e.stopPropagation();
-    console.log("LinkedIn URL:", linkedinUrl); // Debug log
+    console.log("LinkedIn URL:", linkedinUrl);
 
     if (linkedinUrl && linkedinUrl !== "#") {
       window.open(linkedinUrl, "_blank", "noopener,noreferrer");

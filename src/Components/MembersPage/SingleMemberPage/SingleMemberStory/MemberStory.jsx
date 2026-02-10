@@ -8,7 +8,7 @@ import AnimatedIconButton from "./AnimatedIconButton";
 import { memberData } from "../memberData";
 
 export default function MemberStory() {
-  // Take the first member's story
+  
   const member = memberData[0];
 
   return (
