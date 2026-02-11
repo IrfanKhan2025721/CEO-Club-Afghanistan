@@ -73,7 +73,7 @@ export default function Navbar() {
             <div className="hidden sm:flex items-center justify-end basis-1/4 shrink-0 gap-2 lg:gap-3">
               <NavLink
                 to="/contact"
-                className="text-white px-2 lg:px-4 py-1 text-sm lg:text-lg rounded-full border border-transparent hover:border-[#BB7D1D] transition whitespace-nowrap"
+                className="text-white px-2 lg:px-4 py-1 text-sm lg:text-lg rounded-full border border-transparent hover:bg-black hover:border-[#BB7D1D] transition whitespace-nowrap"
               >
                 Contact
               </NavLink>
