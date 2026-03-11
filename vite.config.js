@@ -19,14 +19,14 @@ export default defineConfig({
         start_url: "/",
         icons: [
           {
-            src: "/LOGO.png",
+            src: "/CEO CLub-03.jpg",
             sizes: "192x192",
-            type: "image/png",
+            type: "image/jpg",
           },
           {
-            src: "/LOGO.png",
+            src: "/CEO CLub-03.jpg",
             sizes: "512x512",
-            type: "image/png",
+            type: "image/jpg",
           },
         ],
       },
